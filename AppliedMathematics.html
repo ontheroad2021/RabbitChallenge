@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+
+table {
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #333;
+}
+td {
+  text-align: center;
+}
+.left { display: table-cell; text-align: left; }
+</style>
+</head>
+
+<body>
+<table>
+	<tr>
+		<td width="10%" class="center">科目</td>
+		<td width="10%" class="center">章タイトル</td>
+		<th width="30%">要点のまとめ</th>
+		<th width="10%">演習問題</th>
+		<th width="10%">参考図書</th>
+	</tr>
+	<tr>
+		<td rowspan="3" align="center">応用数学</td>
+		<td align="center">第１章：線形代数</td>
+		<td class="left">
+			<ul>
+			
+<li>行列はベクトルを変換する装置だとみなす事ができる。</li>
+
+<li>掃き出し法（Gaussian Elimination）によって逆行列を求める事ができる。</li>
+
+<li>行列には様々な分解（decomposition）が可能である。</li>
+
+<li>その中から、正方行列に対しては固有値、固有ベクトルと固有値分解。（固有値、固有ベクトルはそれ自体で機械学習に応用を持つらしい：主成分分析）</li>
+
+<li>正方行列でないものに対しても、特異値分解ができる事がある。</li>
+
+<li>特に、機械学習に関係する事としては以下の例がある。</li>
+
+<li>与えられた２つの画像の特異値の大きい部分が同じであれば、それらは同じなのではないか。</li>
+
+<li>機械学習の前処理において、特異値分解してあるものどうしでまとめると、教師なしでもそれらは同じものなのだと言えるのではないか。</li>
+	
+			</ul>
+		</td>
+		<td align="center">
+			<a href="https://github.com/road2021/RabbitChallenge/blob/main/Vectors%20and%20matrices%20operations.pdf">ベクトルと行列の演算</a>
+		</td>
+		<td align="center">
+		</td>
+	</tr>
+	<tr>
+		<td>
+第２章：確率・統計
+		</td>
+		<td class="left">
+			<ul>
+			
+<li>統計学の概念。数学がその言語である。</li>
+<li>集合論の復習。</li>
+<li>確率には大きく２つある。頻度確率（客観確率）とベイズ確率（主観確率）。</li>
+<li>確率の定義。事象（event）の導入。</li>
+<li>条件付き確率の導入。</li>
+<li>独立な事象の同時確率。</li>
+<li>ベイズ則の導入とその利用。</li>
+
+			</ul>
+		</td>
+		<td>
+			確率変数と確率分布
+		</td>
+		<td>
+		</td>
+	</tr>
+	<tr>
+		<td>
+第３章：情報理論
+		</td>
+		<td class="left">
+		</td>
+		</td>
+		<td>
+			情報量
+		</td>
+		<td>
+		</td>
+	</tr>
+</table>
+</body>
+</html>
