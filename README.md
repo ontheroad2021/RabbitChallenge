@@ -1,1 +1,1 @@
-# RabbitChallenge
+# ラビット チャレンジ Deep Learning
