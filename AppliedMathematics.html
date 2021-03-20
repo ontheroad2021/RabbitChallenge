@@ -22,15 +22,20 @@ td {
 <body>
 <table>
 	<tr>
-		<td width="10%" class="center">科目</td>
-		<td width="10%" class="center">章タイトル</td>
-		<th width="30%">要点のまとめ</th>
-		<th width="10%">演習問題</th>
-		<th width="10%">参考図書</th>
+		<th width="5%">ビデオ視聴学習者提出区分け</th>
+		<th width="10%">科目</th>
+		<th width="10%">章タイトル</th>
+		<th width="30%">１点１００文字以上で要点のまとめ</th>
+		<th width="10%">実装演習結果キャプチャーまたはサマリーと考察</th>
+		<th width="10%">「確認テスト」など、自身の考察結果</th>
+		<th width="10%">演習問題や参考図書、修了課題など関連記事レポートによる加点</th>
 	</tr>
 	<tr>
-		<td rowspan="3" align="center">応用数学</td>
-		<td align="center">第１章：線形代数</td>
+		<td rowspan="4">【a】</td>
+		<td rowspan="4">応用数学</td>
+		<td>
+第１章：線形代数
+		</td>
 		<td class="left">
 			<ul>
 			
@@ -44,41 +49,79 @@ td {
 
 <li>正方行列でないものに対しても、特異値分解ができる事がある。</li>
 
-<li>特に、機械学習に関係する事としては以下の例がある。</li>
+<li>特に、機械学習に関係する事としては以下の例がある。
 
-<li>与えられた２つの画像の特異値の大きい部分が同じであれば、それらは同じなのではないか。</li>
+与えられた２つの画像の特異値の大きい部分が同じであれば、それらは同じなのではないか。
 
-<li>機械学習の前処理において、特異値分解してあるものどうしでまとめると、教師なしでもそれらは同じものなのだと言えるのではないか。</li>
+機械学習の前処理において、特異値分解してあるものどうしでまとめると、教師なしでもそれらは同じものだと言えるのではないか。
 	
 			</ul>
 		</td>
-		<td align="center">
-			<a href="https://github.com/road2021/RabbitChallenge/blob/main/Vectors%20and%20matrices%20operations.pdf">ベクトルと行列の演算</a>
+		<td>
+			不要
 		</td>
-		<td align="center">
+		<td rowspan="4">
+			
+			<a href="https://github.com/road2021/RabbitChallenge/blob/main/1_1_4_Review_Test.pdf" target="_blank">応用数学演習問題（確認テスト）</a>
+		</td>
+		<td>
+			<a href="https://github.com/road2021/RabbitChallenge/blob/main/1_1_1_Linear_Algebra.pdf" target="_blank">応用数学演習問題（線形代数）</a>
 		</td>
 	</tr>
-	<tr>
-		<td>
+	<tr rowspan="2">
+		<td rowspan="2">
 第２章：確率・統計
 		</td>
 		<td class="left">
 			<ul>
 			
 <li>統計学の概念。数学がその言語である。</li>
-<li>集合論の復習。</li>
-<li>確率には大きく２つある。頻度確率（客観確率）とベイズ確率（主観確率）。</li>
-<li>確率の定義。事象（event）の導入。</li>
-<li>条件付き確率の導入。</li>
-<li>独立な事象の同時確率。</li>
-<li>ベイズ則の導入とその利用。</li>
 
+<li>集合論の復習。</li>
+
+<li>確率には大きく２つある。頻度確率（客観確率）とベイズ確率（主観確率）。</li>
+
+<li>確率の定義。事象（event）の導入。</li>
+
+<li>条件付き確率の導入。</li>
+
+<li>独立な事象の同時確率。</li>
+
+<li>ベイズ則の導入とその利用。</li>
 			</ul>
 		</td>
-		<td>
-			確率変数と確率分布
+		<td rowspan="2">
+			不要
 		</td>
-		<td>
+		<td rowspan="2">
+			<a href="https://github.com/road2021/RabbitChallenge/blob/main/1_1_2_Probability_and_Statistics.pdf" target="_blank">応用数学演習問題（確率・統計）</a>
+		</td>
+	</tr>
+	<tr>
+		<td class="left">
+			<ul>
+
+<li>記述統計（母集団、抽出、標本、推測）と推測統計。</li>
+
+<li>確率変数と確率分布。</li>
+
+<li>期待値（離散値、連続値）。</li>
+
+<li>分散と共分散（これまではXといったかたちで記述されていた確率変数がfといった関数によって記述されている。）</li>
+
+<li>分散と標準偏差。</li>
+
+<li>確率分布。ベルヌーイ分布、カテゴリカル分布、２項分布、ガウス分布（正規分布）。</li>
+
+<li>推定（点推定、区間推定）。特徴を要約する。</li>
+
+<li>推定量（推定関数）と推定値。</li>
+
+<li>標本平均（一致性、不偏性）。</li>
+
+<li>不偏分散、母分散よりも標本分散（一致性は満たすが不偏性は満たさない）は少し小さくなる。</li>
+
+			</ul>
 		</td>
 	</tr>
 	<tr>
@@ -86,12 +129,25 @@ td {
 第３章：情報理論
 		</td>
 		<td class="left">
-		</td>
+			<ul>
+
+<li>情報科学。情報をどうやって数量化するのか。</li>
+
+<li>自己情報量（情報のめずらしさ）。工学的な出自を持つ概念：モールス信号、計算機。熱力学的なエントロピーの概念とは少し異なる。</li>
+
+<li>シャノンエントロピー：自己情報量の期待値。一般的には情報量が最大になる値を考える事が多い。機械学習では誤差関数に使用できる。</li>
+
+<li>カルバック・ライブラー　ダイバージェンス。ここでダイバージェンスは距離という意味に近いが、通常のその定義を満たさない。情報利得。</li>
+
+<li>交差エントロピー：Ｑ（想定）についての自己情報量をＰ（現実）の分布で平均したものとして作られたと言われている。
+	実用的な目的に基づいている：のろし、電信、モールス信号。距離という概念からは離れてしまうという点で取り扱いに注意が必要。</li>
+				
+			</ul>
+		<td>
+			不要
 		</td>
 		<td>
-			情報量
-		</td>
-		<td>
+			<a href="https://github.com/road2021/RabbitChallenge/blob/main/1_1_3_Infomaion_Theory.pdf" target="_blank">応用数学演習問題（情報理論）</a>
 		</td>
 	</tr>
 </table>
