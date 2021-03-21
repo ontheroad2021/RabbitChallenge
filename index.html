@@ -16,137 +16,185 @@ td {
   text-align: center;
 }
 .left { display: table-cell; text-align: left; }
+.right { display: table-cell; text-align: right; }
 </style>
 </head>
 
 <body>
 <table>
 	<tr>
+		<th width="5%">ビデオ視聴学習者提出区分け</th>
 		<th width="10%">科目</th>
-		<th width="10%">章タイトル</th>
-		<th width="30%">１点１００文字以上で要点のまとめ</th>
-		<th width="10%">実装演習結果キャプチャーまたはサマリーと考察</th>
-		<th width="10%">「確認テスト」など、自身の考察結果</th>
-		<th width="10%">演習問題や参考図書、修了課題など関連記事レポートによる加点</th>
+		<th width="30%">章タイトル</th>
+		<th width="10%" class="left">１点１００文字以上で要点のまとめ</th>
+		<th width="10%" class="left">実装演習結果キャプチャーまたはサマリーと考察</th>
+		<th width="10%" class="left">「確認テスト」など、自身の考察結果</th>
+		<th width="10%" class="left">演習問題や参考図書、修了課題など関連記事レポートによる加点</th>
+		<th width="10%">レポート</th>
 	</tr>
 	<tr>
-		<td rowspan="4">応用数学</td>
-		<td>
-第１章：線形代数
-		</td>
+		<td rowspan="3">【a】</td>
+		<td rowspan="3" class="left">応用数学</td>
 		<td class="left">
-			<ul>
-			
-<li>行列はベクトルを変換する装置だとみなす事ができる。</li>
-
-<li>掃き出し法（Gaussian Elimination）によって逆行列を求める事ができる。</li>
-
-<li>行列には様々な分解（decomposition）が可能である。</li>
-
-<li>その中から、正方行列に対しては固有値、固有ベクトルと固有値分解。（固有値、固有ベクトルはそれ自体で機械学習に応用を持つらしい：主成分分析）</li>
-
-<li>正方行列でないものに対しても、特異値分解ができる事がある。</li>
-
-<li>特に、機械学習に関係する事としては以下の例がある。
-
-与えられた２つの画像の特異値の大きい部分が同じであれば、それらは同じなのではないか。
-
-機械学習の前処理において、特異値分解してあるものどうしでまとめると、教師なしでもそれらは同じものだと言えるのではないか。
-	
-			</ul>
+			第１章：線形代数
 		</td>
-		<td>
+		<td class="right">
+			１点
+		</td>
+		<td class="right">
 			不要
 		</td>
-		<td rowspan="4">
-			応用数学演習問題（確認テスト）
-		</td>
-		<td>
-			<a href="https://github.com/road2021/RabbitChallenge/blob/main/1_1_1_Linear_Algebra.pdf" target="_blank">応用数学演習問題（線形代数）</a>
-		</td>
-	</tr>
-	<tr rowspan="2">
-		<td rowspan="2">
-第２章：確率・統計
-		</td>
-		<td class="left">
-			<ul>
-			
-<li>統計学の概念。数学がその言語である。</li>
-
-<li>集合論の復習。</li>
-
-<li>確率には大きく２つある。頻度確率（客観確率）とベイズ確率（主観確率）。</li>
-
-<li>確率の定義。事象（event）の導入。</li>
-
-<li>条件付き確率の導入。</li>
-
-<li>独立な事象の同時確率。</li>
-
-<li>ベイズ則の導入とその利用。</li>
-			</ul>
-		</td>
-		<td rowspan="2">
+		<td class="right">
 			不要
 		</td>
-		<td rowspan="2">
-			<a href="https://github.com/road2021/RabbitChallenge/blob/main/1_1_2_Probability_and_Statistics.pdf" target="_blank">応用数学演習問題（確率・統計）</a>
+		<td class="right">
+			１点
+		</td>
+		<td rowspan="3">
+			<a href="https://road2021.github.io/RabbitChallenge/AppliedMathematics.html" target="_blank">応用数学レポート</a>
 		</td>
 	</tr>
 	<tr>
 		<td class="left">
-			<ul>
-
-<li>記述統計（母集団、抽出、標本、推測）と推測統計。</li>
-
-<li>確率変数と確率分布。</li>
-
-<li>期待値（離散値、連続値）。</li>
-
-<li>分散と共分散（これまではXといったかたちで記述されていた確率変数がfといった関数によって記述されている。）</li>
-
-<li>分散と標準偏差。</li>
-
-<li>確率分布。ベルヌーイ分布、カテゴリカル分布、２項分布、ガウス分布（正規分布）。</li>
-
-<li>推定（点推定、区間推定）。特徴を要約する。</li>
-
-<li>推定量（推定関数）と推定値。</li>
-
-<li>標本平均（一致性、不偏性）。</li>
-
-<li>不偏分散、母分散よりも標本分散（一致性は満たすが不偏性は満たさない）は少し小さくなる。</li>
-
-			</ul>
+			第２章：確率・統計
+		</td>
+		<td class="right">
+			１点			
+		</td>
+		<td class="right">
+			不要
+		</td>
+		<td class="right">
+			不要
+		</td>
+		<td class="right">
+			１点
 		</td>
 	</tr>
 	<tr>
-		<td>
-第３章：情報理論
-		</td>
 		<td class="left">
-			<ul>
-
-<li>情報科学。情報をどうやって数量化するのか。</li>
-
-<li>自己情報量（情報のめずらしさ）。工学的な出自を持つ概念：モールス信号、計算機。熱力学的なエントロピーの概念とは少し異なる。</li>
-
-<li>シャノンエントロピー：自己情報量の期待値。一般的には情報量が最大になる値を考える事が多い。機械学習では誤差関数に使用できる。</li>
-
-<li>カルバック・ライブラー　ダイバージェンス。ここでダイバージェンスは距離という意味に近いが、通常のその定義を満たさない。情報利得。</li>
-
-<li>交差エントロピー：Ｑ（想定）についての自己情報量をＰ（現実）の分布で平均したものとして作られたと言われている。
-	実用的な目的に基づいている：のろし、電信、モールス信号。距離という概念からは離れてしまうという点で取り扱いに注意が必要。</li>
-				
-			</ul>
-		<td>
+			第３章：情報理論
+		</td>
+		<td class="right">
+			１点
+		</td>
+		<td class="right">
 			不要
 		</td>
-		<td>
-			応用数学演習問題（情報理論）
+		<td class="right">
+			不要
+		</td>
+		<td class="right">
+			１点			
 		</td>
 	</tr>
+	<tr>
+		<td rowspan="6">【b】</td>
+		<td rowspan="6" class="left">機械学習</td>
+		<td class="left">
+			線形回帰モデル
+		</td>
+		<td class="right">
+			１点
+		</td>
+		<td class="right">
+			１点
+		</td>
+		<td class="right">
+			不要
+		</td>
+		<td class="right">
+			１点
+		</td>
+		<td rowspan="6">
+			機械学習レポート
+		</td>
+	</tr>
+	<tr>
+		<td class="left">
+			非線形回帰モデル
+		</td>
+		<td class="right">
+			１点			
+		</td>
+		<td class="right">
+			１点
+		</td>
+		<td class="right">
+			不要
+		</td>
+		<td class="right">
+			１点
+		</td>
+	</tr>
+	<tr>
+		<td class="left">
+			ロジスティック回帰モデル
+		</td>
+		<td class="right">
+			１点
+		</td>
+		<td class="right">
+			１点
+		</td>
+		<td class="right">
+			不要
+		</td>
+		<td class="right">
+			１点			
+		</td>
+	</tr>
+	<tr>
+		<td class="left">
+			主成分分析
+		</td>
+		<td class="right">
+			１点
+		</td>
+		<td class="right">
+			１点
+		</td>
+		<td class="right">
+			不要
+		</td>
+		<td class="right">
+			１点			
+		</td>
+	</tr>
+	<tr>
+		<td class="left">
+			アルゴリズム
+		</td>
+		<td class="right">
+			１点
+		</td>
+		<td class="right">
+			１点
+		</td>
+		<td class="right">
+			不要
+		</td>
+		<td class="right">
+			１点			
+		</td>
+	</tr>
+	<tr>
+		<td class="left">
+			サポートベクターマシーン
+		</td>
+		<td class="right">
+			１点
+		</td>
+		<td class="right">
+			１点
+		</td>
+		<td class="right">
+			不要
+		</td>
+		<td class="right">
+			１点			
+		</td>
+	</tr>		
 </table>
 </body>
 </html>
