@@ -2,18 +2,26 @@
 <html>
 <head>
 <style>
-body {background-color: powderblue;}
-h1   {color: blue;}
-p    {color: red;}
-
+body {
+	background-color: white;
+}
 table {
-  border-collapse: collapse;
+	border-collapse: collapse;
+	background-color: powderblue;
 }
 th, td {
-  border: 1px solid #333;
+	border: 1px solid #333;
 }
 td {
-  text-align: center;
+	text-align: center;
+}
+.header {
+	padding: 10px;
+	text-align: center;
+	background:steelblue;
+	color: black;
+	font-size: 20px;
+	border: 1px solid #333;
 }
 .left { display: table-cell; text-align: left; }
 .right { display: table-cell; text-align: right; }
@@ -21,180 +29,184 @@ td {
 </head>
 
 <body>
-<table>
-	<tr>
-		<th width="5%">ビデオ視聴学習者提出区分け</th>
-		<th width="10%">科目</th>
-		<th width="30%">章タイトル</th>
-		<th width="10%" class="left">１点１００文字以上で要点のまとめ</th>
-		<th width="10%" class="left">実装演習結果キャプチャーまたはサマリーと考察</th>
-		<th width="10%" class="left">「確認テスト」など、自身の考察結果</th>
-		<th width="10%" class="left">演習問題や参考図書、修了課題など関連記事レポートによる加点</th>
-		<th width="10%">レポート</th>
-	</tr>
-	<tr>
-		<td rowspan="3">【a】</td>
-		<td rowspan="3" class="left">応用数学</td>
-		<td class="left">
-			第１章：線形代数
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			不要
-		</td>
-		<td class="right">
-			不要
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td rowspan="3">
-			<a href="https://road2021.github.io/RabbitChallenge/AppliedMathematics.html" target="_blank">応用数学レポート</a>
-		</td>
-	</tr>
-	<tr>
-		<td class="left">
-			第２章：確率・統計
-		</td>
-		<td class="right">
-			１点			
-		</td>
-		<td class="right">
-			不要
-		</td>
-		<td class="right">
-			不要
-		</td>
-		<td class="right">
-			１点
-		</td>
-	</tr>
-	<tr>
-		<td class="left">
-			第３章：情報理論
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			不要
-		</td>
-		<td class="right">
-			不要
-		</td>
-		<td class="right">
-			１点			
-		</td>
-	</tr>
-	<tr>
-		<td rowspan="6">【b】</td>
-		<td rowspan="6" class="left">機械学習</td>
-		<td class="left">
-			線形回帰モデル
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			不要
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td rowspan="6">
-			機械学習レポート
-		</td>
-	</tr>
-	<tr>
-		<td class="left">
-			非線形回帰モデル
-		</td>
-		<td class="right">
-			１点			
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			不要
-		</td>
-		<td class="right">
-			１点
-		</td>
-	</tr>
-	<tr>
-		<td class="left">
-			ロジスティック回帰モデル
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			不要
-		</td>
-		<td class="right">
-			１点			
-		</td>
-	</tr>
-	<tr>
-		<td class="left">
-			主成分分析
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			不要
-		</td>
-		<td class="right">
-			１点			
-		</td>
-	</tr>
-	<tr>
-		<td class="left">
-			アルゴリズム
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			不要
-		</td>
-		<td class="right">
-			１点			
-		</td>
-	</tr>
-	<tr>
-		<td class="left">
-			サポートベクターマシーン
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			不要
-		</td>
-		<td class="right">
-			１点			
-		</td>
-	</tr>		
-</table>
+	<div class="header">
+		<h1>ラビットチャレンジ</h1>
+	</div>	
+	<p></p>
+	<table>
+		<tr>
+			<th width="5%">ビデオ視聴学習者提出区分け</th>
+			<th width="10%">科目</th>
+			<th width="30%">章タイトル</th>
+			<th width="10%" class="left">１点１００文字以上で要点のまとめ</th>
+			<th width="10%" class="left">実装演習結果キャプチャーまたはサマリーと考察</th>
+			<th width="10%" class="left">「確認テスト」など、自身の考察結果</th>
+			<th width="10%" class="left">演習問題や参考図書、修了課題など関連記事レポートによる加点</th>
+			<th width="10%">レポート</th>
+		</tr>
+		<tr>
+			<td rowspan="3">【a】</td>
+			<td rowspan="3" class="left">応用数学</td>
+			<td class="left">
+				第１章：線形代数
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				不要
+			</td>
+			<td class="right">
+				不要
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td rowspan="3">
+				<a href="https://road2021.github.io/RabbitChallenge/AppliedMathematics.html" target="_blank">応用数学レポート</a>
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				第２章：確率・統計
+			</td>
+			<td class="right">
+				１点			
+			</td>
+			<td class="right">
+				不要
+			</td>
+			<td class="right">
+				不要
+			</td>
+			<td class="right">
+				１点
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				第３章：情報理論
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				不要
+			</td>
+			<td class="right">
+				不要
+			</td>
+			<td class="right">
+				１点			
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="6">【b】</td>
+			<td rowspan="6" class="left">機械学習</td>
+			<td class="left">
+				線形回帰モデル
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				不要
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td rowspan="6">
+				機械学習レポート
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				非線形回帰モデル
+			</td>
+			<td class="right">
+				１点			
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				不要
+			</td>
+			<td class="right">
+				１点
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				ロジスティック回帰モデル
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				不要
+			</td>
+			<td class="right">
+				１点			
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				主成分分析
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				不要
+			</td>
+			<td class="right">
+				１点			
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				アルゴリズム
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				不要
+			</td>
+			<td class="right">
+				１点			
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				サポートベクターマシーン
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				不要
+			</td>
+			<td class="right">
+				１点			
+			</td>
+		</tr>		
+	</table>
 </body>
 </html>
