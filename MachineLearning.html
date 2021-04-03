@@ -76,7 +76,7 @@ td {
 				</ul>
 			</td>
 			<td>
-				<a href="https://github.com/road2021/RabbitChallenge/blob/main/2_1_1_1_skl_regression.ipynb" target="_blank">線形回帰モデル-Boston Hausing Data-</a>
+				<a href="https://github.com/road2021/RabbitChallenge/blob/main/2_1_1_1_skl_regression.ipynb" target="_blank">線形回帰モデル-Boston Housing Data-</a>
 			</td>
 			<td>
 				不要
@@ -92,7 +92,21 @@ td {
 			<td class="left">
 				<ul>
 
-				</ul>
+	<li>非線形回帰モデル。基底展開法。回帰関数として、基底関数と呼ばれる既知の非線形関数とパラメータベクトルとの線形結合を使用。</li>
+
+	<li>基底関数には、多項式（１～９次）やガウス基底がある。基底展開法も線形回帰と同じ枠組みで推定可能。</li>
+
+	<li>未学習（underfitting）と過学習（overfitting）。</li>
+
+	<li>過学習への対策。不要な基底関数を削除。正則化法。</li>
+
+	<li>罰則が無かった場合は、最小二乗推定量。L2ノルムを利用、Ridge推定量、縮小推定。L1ノルムを利用、Rasso推定量、スパース推定。</li>
+
+	<li>モデルの表現力を押さえる（どの程度⇒ガンマ）基底関数の個数、位置、バンド巾そして正則化パラメータ。</li>
+
+	<li>モデル選択。ホールドアウト法。クロスバリデーション（交差検証法）。あるモデルホールドアウトで検証したところ70％の精度、CVで65％だった場合でも、汎化性能の推定としてはCVを利用する。</li>
+
+					</ul>
 			</td>
 			<td>
 			</td>
