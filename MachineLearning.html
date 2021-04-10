@@ -22,6 +22,11 @@ td {
 	color: black;
 	font-size: 20px;
 	border: 1px solid #333;
+
+	overflow-y: auto; 
+    position: sticky; 
+	top: 0; 
+
 }
 .left { display: table-cell; text-align: left; }
 </style>
@@ -31,7 +36,9 @@ td {
 	<div class="header">
 		<h1>機械学習レポート</h1>
 	</div>
-	<p></p>
+	
+	<p>	</p>
+
 	<table>
 		<tr>
 			<th width="5%">ビデオ視聴学習者提出区分け</th>
@@ -100,7 +107,7 @@ td {
 
 	<li>過学習への対策。不要な基底関数を削除。正則化法。</li>
 
-	<li>罰則が無かった場合は、最小二乗推定量。L2ノルムを利用、Ridge推定量、縮小推定。L1ノルムを利用、Rasso推定量、スパース推定。</li>
+	<li>罰則が無かった場合は、最小二乗推定量。L2ノルムを利用、Ridge推定量、縮小推定。L1ノルムを利用、Lasso推定量、スパース推定。</li>
 
 	<li>モデルの表現力を押さえる（どの程度⇒ガンマ）基底関数の個数、位置、バンド巾そして正則化パラメータ。</li>
 
@@ -109,6 +116,7 @@ td {
 					</ul>
 			</td>
 			<td>
+				<a href="https://nbviewer.jupyter.org/github/road2021/RabbitChallenge/blob/main/2_1_2_1_skl_nonlinear_regression.ipynb" target="_blank">非線形回帰モデル</a>
 			</td>
 			<td>
 				不要				
