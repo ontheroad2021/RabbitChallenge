@@ -222,14 +222,30 @@ td {
 			</td>
 			<td class="left">
 				<ul>
+
+	<li>次元圧縮（多変量データの持つ構造をより小数個の指標に圧縮）。</li>
 					
+	<li>線形変換後の変数の分散（情報の量）が最大となる射影軸を探索。</li>
+					
+	<li>線形変換後の分散は分散共分散行列とａに関する２次形式で書ける（ａは係数ベクトル）。</li>
+					
+	<li>ラグランジュ関数を最大にする係数ベクトルを探索する事によって、制約つき最適化問題が解ける。</li>
+					
+	<li>主成分分析（ＰＣＡ）の結果、元のデータの分散共分散行列の固有値と固有ベクトルを求めれば、それが分散を最大にする軸になっている。</li>
+					
+	<li>寄与率：第Ｋ主成分が持つ情報量の割合。</li>
+					
+	<li>累積寄与率：第１-Ｋ主成分まで圧縮した際の情報損失量の割合。</li>	
+
 				</ul>
 			<td>
+				<a href="https://nbviewer.jupyter.org/github/road2021/RabbitChallenge/blob/main/2_1_4_1_skl_pca.ipynb" target="_blank">主成分分析</a>
 			</td>
 			<td>
 				不要				
 			</td>			
 			<td>
+				<a href="https://nbviewer.jupyter.org/github/road2021/RabbitChallenge/blob/main/2_1_4_2_np_pca.ipynb" target="_blank">NumPyのみを使用した主成分分析</a>
 			</td>
 		</tr>
 		<tr>
