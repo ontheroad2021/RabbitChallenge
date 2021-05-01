@@ -32,18 +32,47 @@ td {
 	overflow-y: auto; 
     position: sticky; 
 	top: 0; 
-
 }
 .left { display: table-cell; text-align: left; }
+
+#navbar {
+  padding: 0px;
+  text-align: center;
+  background-color: steelblue;
+  color: black;
+  font-size: 20px;
+  border: 1px solid #333;
+
+  position: sticky; /* Make it stick/fixed */
+  top: 0; /* Stay on top */
+  transition: top 0.5s; /* Transition effect when sliding down (and up) */
+}
+
+/* Style the navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  /* padding: 10px; */
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
 </style>
 </head>
 
 <body>
-	<div class="header">
-		<h1>機械学習レポート</h1>
+	<div id="navbar">
+		<tr>
+			<h2>機械学習レポート</h2>
+		</tr>
 	</div>
 	
-	<p>	</p>
+	<p></p>
 
 	<table>
 		<tr>
@@ -351,5 +380,20 @@ td {
 			</td>
 		</tr>			
 	</table>
+
+<script>
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+	document.getElementById("navbar").style.top = "0";
+  } else {
+	document.getElementById("navbar").style.top = "-100px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+
 </body>
 </html>
