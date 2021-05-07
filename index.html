@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<meta name="twitter:title" content="ラビットチャレンジ"/>
+<meta name="twitter:description" content="チャレンジ概要と実装演習レポートへのリンクです。"/>
+<meta name="twitter:image" content="https://ontheroad2021.github.io/RabbitChallenge/RabbitCallengeImage.png"/>
+<meta name="twitter:card" content="summary"/>
+
 <style>
 body {
 	background-color: white;
@@ -29,44 +35,62 @@ td {
 }
 .left { display: table-cell; text-align: left; }
 .right { display: table-cell; text-align: right; }
+
+#navbar {
+  padding: 0px;
+  text-align: center;
+  background-color: steelblue;
+  color: black;
+  font-size: 20px;
+  /* border: 1px solid #333; */
+
+  position: sticky; /* Make it stick/fixed */
+  top: 0; /* Stay on top */
+  transition: top 1.0s; /* Transition effect when sliding down (and up) */
+}
+
 </style>
 </head>
 
 <body>
-	<div class="header">
-		<h1>ラビットチャレンジ</h1>
-	</div>	
-	<p></p>
+	<div id="navbar">
+		<table class="header">
+			<tr>
+				<th colspan="8"><h2>ラビットチャレンジ</h2></th>
+			</tr>
+			<tr>
+				<th width="5%">ビデオ視聴学習者提出区分け</th>
+				<th width="10%">科目</th>
+				<th width="10%">章タイトル</th>
+				<th width="30%" class="left">１点１００文字以上で要点のまとめ</th>
+				<th width="10%" class="left">実装演習結果キャプチャーまたはサマリーと考察</th>
+				<th width="10%" class="left">「確認テスト」など、自身の考察結果</th>
+				<th width="10%" class="left">演習問題や参考図書、修了課題など関連記事レポートによる加点</th>
+				<th width="10%">レポート</th>
+			</tr>
+		</table>
+	</div>
+
 	<table>
 		<tr>
-			<th width="5%">ビデオ視聴学習者提出区分け</th>
-			<th width="10%">科目</th>
-			<th width="30%">章タイトル</th>
-			<th width="10%" class="left">１点１００文字以上で要点のまとめ</th>
-			<th width="10%" class="left">実装演習結果キャプチャーまたはサマリーと考察</th>
-			<th width="10%" class="left">「確認テスト」など、自身の考察結果</th>
-			<th width="10%" class="left">演習問題や参考図書、修了課題など関連記事レポートによる加点</th>
-			<th width="10%">レポート</th>
-		</tr>
-		<tr>
-			<td rowspan="3">【a】</td>
-			<td rowspan="3" class="left">応用数学</td>
-			<td class="left">
+			<td width="5%" rowspan="3">【a】</td>
+			<td width="10%" rowspan="3" class="left">応用数学</td>
+			<td width="10%" class="left">
 				第１章：線形代数
 			</td>
-			<td class="right">
+			<td width="30%" class="right">
 				１点
 			</td>
-			<td class="right">
+			<td width="10%" class="right">
 				不要
 			</td>
-			<td class="right">
+			<td width="10%" class="right">
 				不要
 			</td>
-			<td class="right">
+			<td width="10%" class="right">
 				１点
 			</td>
-			<td rowspan="3">
+			<td width="10%" rowspan="3">
 				<a href="https://ontheroad2021.github.io/RabbitChallenge/AppliedMathematics.html" target="_blank">応用数学レポート</a>
 			</td>
 		</tr>
@@ -230,7 +254,7 @@ td {
 				１点
 			</td>
 			<td rowspan="10">
-				深層学習day１とday２レポート
+				深層学習前編レポート
 			</td>
 		</tr>
 		<tr>
@@ -301,318 +325,333 @@ td {
 				１点			
 			</td>
 		</tr>
-		<td rowspan="5" class="left">深層学習day２</td>
-		<td class="left">
-			Section１：勾配消失問題
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-	</tr>	
-	<tr>
-		<td class="left">
-			Section２：学習率最適化方
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点			
-		</td>
-	</tr>
-	<tr>
-		<td class="left">
-			Section３：過学習
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点			
-		</td>
-	</tr>
-	<tr>
-		<td class="left">
-			Section４：畳み込みニューラルネットワークの概念
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点			
-		</td>
-	</tr>
-	<tr>
-		<td class="left">
-			Section５：最新のＣＮＮ
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点			
-		</td>
-	</tr>	
-	<tr>
-		<td rowspan="13">【d】</td>
-		<td rowspan="7" class="left">深層学習day３</td>
-		<td class="left">
-			Section１：再起型ニューラルネットワークの概念
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td rowspan="13">
-			深層学習day３とday４レポート
-		</td>
-	</tr>
-	<tr>
-		<td class="left">
-			Section２：ＬＳＴＭ
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点			
-		</td>
-	</tr>
-	<tr>
-		<td class="left">
-			Section３：ＧＲＵ
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点			
-		</td>
-	</tr>
-	<tr>
-		<td class="left">
-			Section４：双方向ＲＮＮ
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点			
-		</td>
-	</tr>
-	<tr>
-		<td class="left">
-			Section５：Ｓｅｑ２Ｓｅｑ
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点			
-		</td>
-	</tr>	
-	<tr>
-		<td class="left">
-			Section６：Ｗｏｒｄ２ｖｅｃ
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点			
-		</td>
-	</tr>
-	<tr>
-		<td class="left">
-			Section７：Ａｔｔｅｎｔｉｏｎ　Ｍｅｃｈａｎｉｓｍ	
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			１点			
-		</td>
-	</tr>
-	<tr>
-		<td rowspan="6" class="left">深層学習day４</td>
-		<td class="left">
-			Section１：強化学習
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			不要
-		</td>
-		<td class="right">
-			不要
-		</td>
-		<td class="right">
-			不要
-		</td>
-	</tr>
-	<tr>
-		<td class="left">
-			Section２：ＡｌｐｈａＧｏ
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			不要
-		</td>
-		<td class="right">
-			不要
-		</td>
-		<td class="right">
-			不要			
-		</td>
-	</tr>
-	<tr>
-		<td class="left">
-			Section３：軽量化・高速化技術
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			不要
-		</td>
-		<td class="right">
-			不要
-		</td>
-		<td class="right">
-			不要			
-		</td>
-	</tr>
-	<tr>
-		<td class="left">
-			Section４：応用モデル
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			不要
-		</td>
-		<td class="right">
-			不要
-		</td>
-		<td class="right">
-			不要			
-		</td>
-	</tr>
-	<tr>
-		<td class="left">
-			Section５：Ｔｒａｎｓｆｏｒｍｅｒ
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			不要
-		</td>
-		<td class="right">
-			不要
-		</td>
-		<td class="right">
-			不要			
-		</td>
-	</tr>	
-	<tr>
-		<td class="left">
-			Section６：物体検知・セグメンテーション
-		</td>
-		<td class="right">
-			１点
-		</td>
-		<td class="right">
-			不要
-		</td>
-		<td class="right">
-			不要
-		</td>
-		<td class="right">
-			不要			
-		</td>
-	</tr>				
+			<td rowspan="5" class="left">深層学習day２</td>
+			<td class="left">
+				Section１：勾配消失問題
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+		</tr>	
+		<tr>
+			<td class="left">
+				Section２：学習率最適化方
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点			
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section３：過学習
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点			
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section４：畳み込みニューラルネットワークの概念
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点			
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section５：最新のＣＮＮ
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点			
+			</td>
+		</tr>	
+		<tr>
+			<td rowspan="13">【d】</td>
+			<td rowspan="7" class="left">深層学習day３</td>
+			<td class="left">
+				Section１：再起型ニューラルネットワークの概念
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td rowspan="13">
+				深層学習後編レポート
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section２：ＬＳＴＭ
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点			
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section３：ＧＲＵ
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点			
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section４：双方向ＲＮＮ
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点			
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section５：Ｓｅｑ２Ｓｅｑ
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点			
+			</td>
+		</tr>	
+		<tr>
+			<td class="left">
+				Section６：Ｗｏｒｄ２ｖｅｃ
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点			
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section７：Ａｔｔｅｎｔｉｏｎ　Ｍｅｃｈａｎｉｓｍ	
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点			
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="6" class="left">深層学習day４</td>
+			<td class="left">
+				Section１：強化学習
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				不要
+			</td>
+			<td class="right">
+				不要
+			</td>
+			<td class="right">
+				不要
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section２：ＡｌｐｈａＧｏ
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				不要
+			</td>
+			<td class="right">
+				不要
+			</td>
+			<td class="right">
+				不要			
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section３：軽量化・高速化技術
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				不要
+			</td>
+			<td class="right">
+				不要
+			</td>
+			<td class="right">
+				不要			
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section４：応用モデル
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				不要
+			</td>
+			<td class="right">
+				不要
+			</td>
+			<td class="right">
+				不要			
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section５：Ｔｒａｎｓｆｏｒｍｅｒ
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				不要
+			</td>
+			<td class="right">
+				不要
+			</td>
+			<td class="right">
+				不要			
+			</td>
+		</tr>	
+		<tr>
+			<td class="left">
+				Section６：物体検知・セグメンテーション
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				不要
+			</td>
+			<td class="right">
+				不要
+			</td>
+			<td class="right">
+				不要			
+			</td>
+		</tr>				
 	</table>
+
+	<script>
+		/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+		var prevScrollpos = window.pageYOffset;
+		window.onscroll = function() {
+		var currentScrollPos = window.pageYOffset;
+		  if (prevScrollpos > currentScrollPos) {
+			document.getElementById("navbar").style.top = "0";
+		  } else {
+			document.getElementById("navbar").style.top = "-200px";
+		  }
+		  prevScrollpos = currentScrollPos;
+		}
+	</script>
+
 </body>
 </html>
