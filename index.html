@@ -13,7 +13,7 @@ body {
 }
 table {
 	border-collapse: collapse;
-	background-color: powderblue;
+	background-color: lightgray;
 }
 th, td {
 	border: 1px solid #333;
@@ -21,6 +21,24 @@ th, td {
 td {
 	text-align: center;
 }
+
+.group { 
+	background: powderblue;
+	width: 100%;	
+}
+.group:hover {
+    background-color: lightsteelblue;
+}
+
+.g1 { width:  5% }
+.g2 { width: 10%; text-align: left; }
+.g3 { width: 15%; text-align: left; }
+.g4 { width: 25%; text-align: right; }
+.g5 { width: 10%; text-align: right; }
+.g6 { width: 10%; text-align: right; }
+.g7 { width: 10%; text-align: right; }
+.g8 { width: 10%; }
+
 .header {
 	padding: 10px;
 	text-align: center;
@@ -61,8 +79,8 @@ td {
 			<tr>
 				<th width="5%">ビデオ視聴学習者提出区分け</th>
 				<th width="10%">科目</th>
-				<th width="10%">章タイトル</th>
-				<th width="30%" class="left">１点１００文字以上で要点のまとめ</th>
+				<th width="15%">章タイトル</th>
+				<th width="25%" class="left">１点１００文字以上で要点のまとめ</th>
 				<th width="10%" class="left">実装演習結果キャプチャーまたはサマリーと考察</th>
 				<th width="10%" class="left">「確認テスト」など、自身の考察結果</th>
 				<th width="10%" class="left">演習問題や参考図書、修了課題など関連記事レポートによる加点</th>
@@ -71,26 +89,26 @@ td {
 		</table>
 	</div>
 
-	<table>
+	<table class="group">
 		<tr>
-			<td width="5%" rowspan="3">【a】</td>
-			<td width="10%" rowspan="3" class="left">応用数学</td>
-			<td width="10%" class="left">
+			<td class="g1" rowspan="3">【a】</td>
+			<td class="g2" rowspan="3" class="left">応用数学</td>
+			<td class="g3">
 				第１章：線形代数
 			</td>
-			<td width="30%" class="right">
+			<td class="g4">
 				１点
 			</td>
-			<td width="10%" class="right">
+			<td class="g5">
 				不要
 			</td>
-			<td width="10%" class="right">
+			<td class="g6">
 				不要
 			</td>
-			<td width="10%" class="right">
+			<td class="g7">
 				１点
 			</td>
-			<td width="10%" rowspan="3">
+			<td class="g8" rowspan="3">
 				<a href="https://ontheroad2021.github.io/RabbitChallenge/AppliedMathematics.html" target="_blank">応用数学レポート</a>
 			</td>
 		</tr>
@@ -128,25 +146,28 @@ td {
 				１点			
 			</td>
 		</tr>
+	</table>
+
+	<table class="group">
 		<tr>
-			<td rowspan="6">【b】</td>
-			<td rowspan="6" class="left">機械学習</td>
-			<td class="left">
+			<td class="g1" rowspan="6">【b】</td>
+			<td class="g2" rowspan="6">機械学習</td>
+			<td class="g3">
 				線形回帰モデル
 			</td>
-			<td class="right">
+			<td class="g4">
 				１点
 			</td>
-			<td class="right">
+			<td class="g5">
 				１点
 			</td>
-			<td class="right">
+			<td class="g6">
 				不要
 			</td>
-			<td class="right">
+			<td class="g7">
 				１点
 			</td>
-			<td rowspan="6">
+			<td class="g8" rowspan="6">
 				<a href="https://ontheroad2021.github.io/RabbitChallenge/MachineLearning.html" target="_blank">機械学習レポート</a>
 			</td>
 		</tr>
@@ -234,26 +255,29 @@ td {
 			<td class="right">
 				１点			
 			</td>
-		</tr>	
+		</tr>
+	</table>
+		
+	<table class="group">
 		<tr>
-			<td rowspan="10">【c】</td>
-			<td rowspan="5" class="left">深層学習day１</td>
-			<td class="left">
+			<td class="g1" rowspan="10">【c】</td>
+			<td class="g2" rowspan="5" class="left">深層学習day１</td>
+			<td class="g3">
 				Section１：入力層～中間層
 			</td>
-			<td class="right">
+			<td class="g4">
 				１点
 			</td>
-			<td class="right">
+			<td class="g5">
 				１点
 			</td>
-			<td class="right">
+			<td class="g6">
 				１点
 			</td>
-			<td class="right">
+			<td class="g7">
 				１点
 			</td>
-			<td rowspan="10">
+			<td class="g8" rowspan="10">
 				深層学習前編レポート
 			</td>
 		</tr>
@@ -410,25 +434,27 @@ td {
 				１点			
 			</td>
 		</tr>	
+	</table>
+	<table class="group">	
 		<tr>
-			<td rowspan="13">【d】</td>
-			<td rowspan="7" class="left">深層学習day３</td>
-			<td class="left">
+			<td class="g1" rowspan="13">【d】</td>
+			<td class="g2" rowspan="7">深層学習day３</td>
+			<td class="g3">
 				Section１：再起型ニューラルネットワークの概念
 			</td>
-			<td class="right">
+			<td class="g4">
 				１点
 			</td>
-			<td class="right">
+			<td class="g5">
 				１点
 			</td>
-			<td class="right">
+			<td class="g6">
 				１点
 			</td>
-			<td class="right">
+			<td class="g7">
 				１点
 			</td>
-			<td rowspan="13">
+			<td class="g8" rowspan="13">
 				深層学習後編レポート
 			</td>
 		</tr>
@@ -647,7 +673,7 @@ td {
 		  if (prevScrollpos > currentScrollPos) {
 			document.getElementById("navbar").style.top = "0";
 		  } else {
-			document.getElementById("navbar").style.top = "-200px";
+			document.getElementById("navbar").style.top = "-250px";
 		  }
 		  prevScrollpos = currentScrollPos;
 		}
