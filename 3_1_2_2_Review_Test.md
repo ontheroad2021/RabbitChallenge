@@ -10,11 +10,7 @@
 
 ## 確認テスト２
 
-以下の数式をPythonで書け。
-
-<p align="center">
-  <img src="https://latex.codecogs.com/svg.latex?\begin{align*}u&=w_1x_1+w_2x_2+w_3x_3+w_4x_4+b\\&=\mathbf{W}\mathbf{x}+b\end{align*}" />
-</P>
+配布されたソースコードより、「順伝播（3層・複数ユニット）」から、活性化関数に該当する箇所を抜き出せ。
 
 解答：
 ```
