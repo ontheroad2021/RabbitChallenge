@@ -1,4 +1,4 @@
-# 深層学習 day１ Section２：出力層
+# 深層学習 day１ Section３：出力層
 
 ## 確認テスト１
 
