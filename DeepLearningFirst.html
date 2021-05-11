@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="twitter:title" content="深層学習前半"/>
+<meta name="twitter:description" content="深層学習前半の要点のまとめと実装演習結果へのリンクです。"/>
+<meta name="twitter:image" content="https://ontheroad2021.github.io/RabbitChallenge/images/RabbitChallengeImage.png"/>
+<meta name="twitter:card" content="summary"/>
+
+<style>
+body {
+	background-color: white;
+}
+table {
+	border-collapse: collapse;
+	background-color: lightgray;
+}
+th, td {
+	border: 1px solid #333;
+}
+td {
+	text-align: center;
+}
+
+.group { 
+	background: powderblue;
+	width: 100%;	
+}
+.group:hover {
+    background-color: lightsteelblue;
+}
+
+.g1 { width:  5% }
+.g2 { width: 10%; text-align: left; }
+.g3 { width: 15%; text-align: left; }
+.g4 { width: 25%; text-align: right; }
+.g5 { width: 10%; text-align: right; }
+.g6 { width: 10%; text-align: right; }
+.g7 { width: 10%; text-align: right; }
+
+.header {
+	padding: 10px;
+	text-align: center;
+	background:steelblue;
+	color: black;
+	font-size: 20px;
+	border: 1px solid #333;
+
+	overflow-y: auto; 
+    position: sticky; 
+	top: 0; 
+}
+.left { display: table-cell; text-align: left; }
+.right { display: table-cell; text-align: right; }
+
+#navbar {
+  padding: 0px;
+  text-align: center;
+  background-color: steelblue;
+  color: black;
+  font-size: 20px;
+  /* border: 1px solid #333; */
+
+  position: sticky; /* Make it stick/fixed */
+  top: 0; /* Stay on top */
+  transition: top 1.0s; /* Transition effect when sliding down (and up) */
+}
+
+</style>
+</head>
+
+<body>
+	<div id="navbar">
+		<table class="header">
+			<tr>
+				<th colspan="8"><h2>ラビットチャレンジ</h2></th>
+			</tr>
+			<tr>
+				<th width="5%">ビデオ視聴学習者提出区分け</th>
+				<th width="10%">科目</th>
+				<th width="15%">章タイトル</th>
+				<th width="25%" class="left">１点１００文字以上で要点のまとめ</th>
+				<th width="10%" class="left">実装演習結果キャプチャーまたはサマリーと考察</th>
+				<th width="10%" class="left">「確認テスト」など、自身の考察結果</th>
+				<th width="10%" class="left">演習問題や参考図書、修了課題など関連記事レポートによる加点</th>
+			</tr>
+		</table>
+	</div>
+		
+	<table class="group">
+		<tr>
+			<td class="g1" rowspan="10">【c】</td>
+			<td class="g2" rowspan="5" class="left">深層学習day１</td>
+			<td class="g3">
+				Section１：入力層～中間層
+			</td>
+			<td class="g4">
+				１点
+			</td>
+			<td class="g5">
+				１点
+			</td>
+			<td class="g6">
+				１点
+			</td>
+			<td class="g7">
+				１点
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section２：活性化関数
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点			
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section３：出力層
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点			
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section４：勾配降下法
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点			
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section５：誤差逆伝播法
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点			
+			</td>
+		</tr>
+			<td rowspan="5" class="left">深層学習day２</td>
+			<td class="left">
+				Section１：勾配消失問題
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+		</tr>	
+		<tr>
+			<td class="left">
+				Section２：学習率最適化方
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点			
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section３：過学習
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点			
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section４：畳み込みニューラルネットワークの概念
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点			
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section５：最新のＣＮＮ
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点
+			</td>
+			<td class="right">
+				１点			
+			</td>
+		</tr>	
+	</table>
+
+	<script>
+		/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+		var prevScrollpos = window.pageYOffset;
+		window.onscroll = function() {
+		var currentScrollPos = window.pageYOffset;
+		  if (prevScrollpos > currentScrollPos) {
+			document.getElementById("navbar").style.top = "0";
+		  } else {
+			document.getElementById("navbar").style.top = "-250px";
+		  }
+		  prevScrollpos = currentScrollPos;
+		}
+	</script>
+
+</body>
+</html>
