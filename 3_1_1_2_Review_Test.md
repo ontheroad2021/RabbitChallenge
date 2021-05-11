@@ -6,7 +6,7 @@
 
 解答：
 
-   ![GitHub Logo](/3_1_1_2_Review_Test_01.PNG)
+   ![GitHub Logo](/images/3_1_1_2_Review_Test_01.png)
 
 ## 確認テスト２
 
