@@ -31,3 +31,23 @@ def softmax(x):
     x = x - np.max(x) # オーバーフロー対策
     return np.exp(x) / np.sum(np.exp(x))
 ```
+
+## 確認テスト３
+
+①～③の数式該当するソースコードを示し、一行づつ処理の説明をせよ。
+
+解答：
+```    
+# クロスエントロピー
+def cross_entropy_error(d, y):
+    if y.ndim == 1:
+        d = d.reshape(1, d.size)
+        y = y.reshape(1, y.size)
+        
+    # 教師データがone-hot-vectorの場合、正解ラベルのインデックスに変換
+    if d.size == y.size:
+        d = d.argmax(axis=1)
+             
+    batch_size = y.shape[0]
+    return -np.sum(np.log(y[np.arange(batch_size), d] + 1e-7)) / batch_size
+```
