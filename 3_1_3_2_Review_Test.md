@@ -4,7 +4,7 @@
 
 誤差関数（２乗和誤差、残差平方和）において、
 * なぜ、引き算するのみではなく、二乗するのか述べよ
-* 下式の1/2はどういう意味を持つか述べよ
+* 1/2はどういう意味を持つか述べよ
 
 解答：
 
@@ -15,7 +15,11 @@
 
 ## 確認テスト２
 
-①～③の数式該当するソースコードを示し、一行づつ処理の説明をせよ。
+以下の数式に該当するソースコードを示し、一行づつ処理の説明をせよ。
+
+<p align="center">
+    <img src="https://latex.codecogs.com/svg.latex?\begin{align*}f(i,u)={\dfrac{e^{u_i}}{\sum_{k=1}^{n}e^{u_k}}}\end{align*}">  
+</p>
 
 解答：
 ```    
@@ -34,7 +38,11 @@ def softmax(x):
 
 ## 確認テスト３
 
-①～③の数式該当するソースコードを示し、一行づつ処理の説明をせよ。
+以下の数式に該当するソースコードを示し、一行づつ処理の説明をせよ。
+
+<p align="center">
+    <img src="https://latex.codecogs.com/svg.latex?\begin{align*}E_n(\mathbf{w})={-\sum_{i=1}^{l}d_i\log%20y_i}\end{align*}">  
+</p>
 
 解答：
 ```    
