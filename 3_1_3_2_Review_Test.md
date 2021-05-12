@@ -15,13 +15,19 @@
 
 ## 確認テスト２
 
-配布されたソースコードより、「順伝播（3層・複数ユニット）」から、活性化関数に該当する箇所を抜き出せ。
+①～③の数式該当するソースコードを示し、一行づつ処理の説明をせよ。
 
 解答：
 ```    
-# 1層の総出力
-z1 = functions.relu(u1)
-    
-# 2層の総出力
-z2 = functions.relu(u2)
+# 出力層の活性化関数
+# ソフトマックス関数
+def softmax(x):
+    if x.ndim == 2:
+        x = x.T
+        x = x - np.max(x, axis=0)
+        y = np.exp(x) / np.sum(np.exp(x), axis=0)
+        return y.T
+
+    x = x - np.max(x) # オーバーフロー対策
+    return np.exp(x) / np.sum(np.exp(x))
 ```
