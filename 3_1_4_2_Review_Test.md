@@ -8,6 +8,12 @@
     <img src="https://latex.codecogs.com/svg.latex?\begin{align*}\mathbf{w}^{(t+1)}&=\mathbf{w}^{(t)}-\varepsilon\nabla%20E_{n}\end{align*}"> 
 </P>
 
+ 
+<p align="center">
+    <img src="https://latex.codecogs.com/svg.latex?\begin{document}\color{black}\nabla{E}=\frac{\partial{E}}{\partial\mathbf{w}}=\begin{bmatrix}\frac{\partial{E}}{\partial{w_1}}\cdots\frac{\partial{E}}{\partial{w_n}}\end{bmatrix}\end{document}"> 
+</P>
+
+
 解答：
 
 該当するコードは確率的勾配降下法の中から以下の行になる。
