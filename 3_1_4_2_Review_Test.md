@@ -2,9 +2,11 @@
 
 ## 確認テスト１
 
-誤差関数（２乗和誤差、残差平方和）において、
-* なぜ、引き算するのみではなく、二乗するのか述べよ
-* 1/2はどういう意味を持つか述べよ
+以下の勾配降下法に該当するソースコードを探してみよう。
+
+<p align="center">
+    <img src="https://latex.codecogs.com/svg.latex?\begin{align*}\mathbf{w}^{(t+1)}&=\mathbf{w}^{(t)}-\varepsilon\nabla%20E\end{align*}"> 
+</P>
 
 解答：
 
