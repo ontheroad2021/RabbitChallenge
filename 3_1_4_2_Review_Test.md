@@ -17,32 +17,10 @@
 
 オンライン学習とは。
 
-<p align="center">
-    <img src="https://latex.codecogs.com/svg.latex?\begin{align*}f(i,u)={\dfrac{e^{u_i}}{\sum_{k=1}^{n}e^{u_k}}}\end{align*}">  
-</p>
-
 解答：
 
-処理として本質的なのは下になる。
-```
-np.exp(x) / np.sum(np.exp(x))
-``` 
+学習データが入ってくる度に都度パラメータ（重み）を更新し、学習を進めていく方法。一方、バッチ学習では一度にすべての学習データを使用してパラメータ更新を行う。
 
-下のソフトマックス関数内において、If文の中はミニバッチとしてデータが取り扱われる時に使用される。その時に入力として入ってくるｘの行列の形が少し違うので以下の様な処理に変わっている。
-
-```    
-# 出力層の活性化関数
-# ソフトマックス関数
-def softmax(x):
-    if x.ndim == 2:
-        x = x.T
-        x = x - np.max(x, axis=0)
-        y = np.exp(x) / np.sum(np.exp(x), axis=0)
-        return y.T
-
-    x = x - np.max(x) # オーバーフロー対策
-    return np.exp(x) / np.sum(np.exp(x))
-```
 
 ## 確認テスト３
 
