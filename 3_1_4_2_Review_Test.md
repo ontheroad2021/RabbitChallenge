@@ -1,4 +1,4 @@
-# 深層学習 day１ Section３：出力層
+# 深層学習 day１ Section４：勾配降下法
 
 ## 確認テスト１
 
@@ -15,7 +15,7 @@
 
 ## 確認テスト２
 
-以下の数式に該当するソースコードを示し、一行づつ処理の説明をせよ。
+オンライン学習とは。
 
 <p align="center">
     <img src="https://latex.codecogs.com/svg.latex?\begin{align*}f(i,u)={\dfrac{e^{u_i}}{\sum_{k=1}^{n}e^{u_k}}}\end{align*}">  
