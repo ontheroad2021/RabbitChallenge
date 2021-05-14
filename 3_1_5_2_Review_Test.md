@@ -30,9 +30,19 @@ delta1 = np.dot(delta2, W2.T) * functions.d_sigmoid(z1)
 
 ## 確認テスト２
 
-空欄に該当するソースコードを探せ。
+以下のそれぞれに該当するソースコードを探せ。
 
-\[\frac{\partial{E}}{\partial{\mathbf{y}}}\frac{\partial{\mathbf{y}}}{\partial{\mathbf{u}}}\] 
+<p align="center">
+    <img src="https://latex.codecogs.com/svg.latex?\begin{align*}\frac{\partial{E}}{\partial{\mathbf{y}}}\end{align*}"> 
+</p>
+
+<p align="center">
+    <img src="https://latex.codecogs.com/svg.latex?\begin{align*}\frac{\partial{E}}{\partial{\mathbf{y}}}\frac{\partial{\mathbf{y}}}{\partial{\mathbf{u}}}\end{align*}"> 
+</p>
+
+<p align="center">
+    <img src="https://latex.codecogs.com/svg.latex?\begin{align*}\frac{\partial{E}}{\partial{\mathbf{y}}}\frac{\partial{\mathbf{y}}}{\partial{\mathbf{u}}}\frac{\partial{\mathbf{u}}}{\partial{w_{ji}^{(2)}}}\end{align*} ">
+</p>
 
 解答：
 
