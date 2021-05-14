@@ -60,4 +60,4 @@ lists = range(epoch)
 
 解答：
 
-
+   ![GitHub Logo](/images/3_1_4_2_Review_Test_03.png)
