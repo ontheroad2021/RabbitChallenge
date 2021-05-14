@@ -21,6 +21,9 @@
 ```
 network[key]  -= learning_rate * grad[key]
 ```
+```
+grad = backward(x, d, z1, y)
+```
 
 ```
 # 勾配降下の繰り返し
