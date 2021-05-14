@@ -46,6 +46,26 @@ delta1 = np.dot(delta2, W2.T) * functions.d_sigmoid(z1)
 
 解答：
 
+<p align="center">
+    <img src="https://latex.codecogs.com/svg.latex?\begin{align*}\frac{\partial{E}}{\partial{\mathbf{y}}}\end{align*}"> 
+</p>
 
+```
+delta2 = functions.d_mean_squared_error(d, y)
+```
 
+<p align="center">
+    <img src="https://latex.codecogs.com/svg.latex?\begin{align*}\frac{\partial{E}}{\partial{\mathbf{y}}}\frac{\partial{\mathbf{y}}}{\partial{\mathbf{u}}}\end{align*}"> 
+</p>
 
+```
+delta1 = np.dot(delta2, W2.T) * functions.d_sigmoid(z1)
+```
+
+<p align="center">
+    <img src="https://latex.codecogs.com/svg.latex?\begin{align*}\frac{\partial{E}}{\partial{\mathbf{y}}}\frac{\partial{\mathbf{y}}}{\partial{\mathbf{u}}}\frac{\partial{\mathbf{u}}}{\partial{w_{ji}^{(2)}}}\end{align*} ">
+</p>
+
+```
+grad['W1'] = np.dot(x.T, delta1)
+```
