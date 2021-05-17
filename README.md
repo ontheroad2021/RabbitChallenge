@@ -1,1 +1,1 @@
-# ラビット チャレンジ Deep Learning
+# Deep Learning
