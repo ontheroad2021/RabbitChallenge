@@ -9,31 +9,14 @@
 
 <p align="center">
     <img src="https://latex.codecogs.com/svg.latex?\begin{align*}z&=t^2\\t&=x+y\\\end{align*}"> 
-</p>d
+</p>
 
 解答：
 
-```
-# 出力層でのデルタ
-delta2 = functions.d_mean_squared_error(d, y)
-```
+ ![GitHub Logo](/images/3_2_1_2_Review_Test_01.png)
 
-以下に見られるように１度微分されたものdelta2がその他、多くの箇所で使用されているために計算量が少なくて済むというのが勾配降下法の特徴になる。
 
-```
-# 出力層でのデルタ
-delta2 = functions.d_mean_squared_error(d, y)
-# b2の勾配
-grad['b2'] = np.sum(delta2, axis=0)
-# W2の勾配
-grad['W2'] = np.dot(z1.T, delta2)
-# 中間層でのデルタ
-#delta1 = np.dot(delta2, W2.T) * functions.d_relu(z1)
 
-## 試してみよう
-delta1 = np.dot(delta2, W2.T) * functions.d_sigmoid(z1)
-```  
-  
 
 ## 確認テスト２
 
