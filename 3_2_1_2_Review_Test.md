@@ -1,8 +1,15 @@
-# 深層学習 day１ Section５：誤差逆伝播法
+
+
+
+# 深層学習 day２ Section１：勾配消失問題
 
 ## 確認テスト１
 
-誤差逆伝播法では不要な再帰的処理を避ける事が出来る。既に行った計算結果を保持しているソースコードを抽出せよ。
+連鎖率の原理を使い、dz/dx を求めよ。
+
+<p align="center">
+    <img src="https://latex.codecogs.com/svg.latex?\begin{align*}z&=t^2\\t&=x+y\\\end{align*}"> 
+</p>d
 
 解答：
 
