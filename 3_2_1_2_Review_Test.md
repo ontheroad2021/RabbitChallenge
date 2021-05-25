@@ -13,9 +13,9 @@
 
 解答：
 
- ![GitHub Logo](/images/3_2_1_2_Review_Test_01.png)
-
-
+<p align="center">
+    <img src="https://github.com/ontheroad2021/RabbitChallenge/blob/main/images/3_2_1_2_Review_Test_01.png"> 
+</p>
 
 
 ## 確認テスト２
