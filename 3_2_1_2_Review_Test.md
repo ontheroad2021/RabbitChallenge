@@ -27,80 +27,31 @@
 <p align="center">(3) 0.35</p>
 <p align="center">(4) 0.45</p>
 
-以下のそれぞれに該当するソースコードを探せ。
-
-<p align="center">
-    <img src="https://latex.codecogs.com/svg.latex?\begin{align*}\frac{\partial{E}}{\partial{\mathbf{y}}}\end{align*}"> 
-</p>
-
-<p align="center">
-    <img src="https://latex.codecogs.com/svg.latex?\begin{align*}\frac{\partial{E}}{\partial{\mathbf{y}}}\frac{\partial{\mathbf{y}}}{\partial{\mathbf{u}}}\end{align*}"> 
-</p>
-
-<p align="center">
-    <img src="https://latex.codecogs.com/svg.latex?\begin{align*}\frac{\partial{E}}{\partial{\mathbf{y}}}\frac{\partial{\mathbf{y}}}{\partial{\mathbf{u}}}\frac{\partial{\mathbf{u}}}{\partial{w_{ji}^{(2)}}}\end{align*} ">
-</p>
-
 解答：
 
+正解は (2) 0.25
+
 <p align="center">
-    <img src="https://latex.codecogs.com/svg.latex?\begin{align*}\frac{\partial{E}}{\partial{\mathbf{y}}}\end{align*}"> 
+    <img src="https://raw.githubusercontent.com/ontheroad2021/RabbitChallenge/main/images/3_2_1_2_Review_Test_02.png"> 
 </p>
 
 ```
-delta2 = functions.d_mean_squared_error(d, y)
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.arange(-10, 10, 0.1)
+def sigmoid(x):
+  return 1/(1+np.exp(-x))
+
+fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(10, 4))
+axes[0].plot(x, sigmoid(x), label="sigmoid")
+axes[0].set_title('sigmoid')
+
+def sigmoid_d(x):
+  return (1-sigmoid(x)) * sigmoid(x)
+
+axes[1].plot(x, sigmoid_d(x))
+axes[1].set_title('derivative of sigmoid')
+plt.show()
 ```
 
-<p align="center">
-    <img src="https://latex.codecogs.com/svg.latex?\begin{align*}\frac{\partial{E}}{\partial{\mathbf{y}}}\frac{\partial{\mathbf{y}}}{\partial{\mathbf{u}}}\end{align*}"> 
-</p>
-
-```
-delta1 = np.dot(delta2, W2.T) * functions.d_sigmoid(z1)
-```
-
-<p align="center">
-    <img src="https://latex.codecogs.com/svg.latex?\begin{align*}\frac{\partial{E}}{\partial{\mathbf{y}}}\frac{\partial{\mathbf{y}}}{\partial{\mathbf{u}}}\frac{\partial{\mathbf{u}}}{\partial{w_{ji}^{(2)}}}\end{align*} ">
-</p>
-
-```
-grad['W1'] = np.dot(x.T, delta1)
-```
-
-いずれも以下の誤差逆伝播のコードからの抜粋になります。
-```
-# 誤差逆伝播
-def backward(x, d, z1, y):
-    # print("\n##### 誤差逆伝播開始 #####")    
-
-    grad = {}
-    
-    W1, W2 = network['W1'], network['W2']
-    b1, b2 = network['b1'], network['b2']
-
-    # 出力層でのデルタ
-    delta2 = functions.d_mean_squared_error(d, y)
-    # b2の勾配
-    grad['b2'] = np.sum(delta2, axis=0)
-    # W2の勾配
-    grad['W2'] = np.dot(z1.T, delta2)
-    # 中間層でのデルタ  
-    #delta1 = np.dot(delta2, W2.T) * functions.d_relu(z1)
-
-    ## 試してみよう
-    delta1 = np.dot(delta2, W2.T) * functions.d_sigmoid(z1)
-
-    delta1 = delta1[np.newaxis, :]
-    # b1の勾配
-    grad['b1'] = np.sum(delta1, axis=0)
-    x = x[np.newaxis, :]
-    # W1の勾配
-    grad['W1'] = np.dot(x.T, delta1)
-    
-    # print_vec("偏微分_重み1", grad["W1"])
-    # print_vec("偏微分_重み2", grad["W2"])
-    # print_vec("偏微分_バイアス1", grad["b1"])
-    # print_vec("偏微分_バイアス2", grad["b2"])
-
-    return grad
-```
