@@ -273,7 +273,7 @@ td {
 
 <li>勾配消失の解決方法</li>
 
-	<ul>
+					<ul>
 				
 <li>活性化関数の選択：ReLU関数、勾配消失問題の回避とスパース化に貢献する事で良い結果をもたらしている。</li>
 				
@@ -281,17 +281,17 @@ td {
 				
 <li>バッチ正規化</li>
 
-		</ul>
+					</ul>
 				</ul>
 			</td>
 			<td>
-				<a href="https://nbviewer.jupyter.org/github/ontheroad2021/RabbitChallenge/blob/main/3_2_1_1_2_1_network_modified.ipynb" target="_blank">2_1_network_modified.ipynb</a>
+				<a href="https://nbviewer.jupyter.org/github/ontheroad2021/RabbitChallenge/blob/main/3_2_1_1_2_1_network_modified.ipynb" target="_blank">ネットワーク（修正）</a><br>
 
-				<a href="https://nbviewer.jupyter.org/github/ontheroad2021/RabbitChallenge/blob/main/3_2_1_1_2_2_1_vanishing_gradient.ipynb" target="_blank">2_2_1_vanishing_gradient</a>
+				<a href="https://nbviewer.jupyter.org/github/ontheroad2021/RabbitChallenge/blob/main/3_2_1_1_2_2_1_vanishing_gradient.ipynb" target="_blank">勾配消失問題</a><br>
 
-				<a href="https://nbviewer.jupyter.org/github/ontheroad2021/RabbitChallenge/blob/main/3_2_1_1_2_2_2_vanishing_gradient_modified.ipynb" target="_blank">2_2_2_vanishing_gradient_modified.ipynb</a>
+				<a href="https://nbviewer.jupyter.org/github/ontheroad2021/RabbitChallenge/blob/main/3_2_1_1_2_2_2_vanishing_gradient_modified.ipynb" target="_blank">勾配消失問題（修正）</a><br>
 
-				<a href="https://nbviewer.jupyter.org/github/ontheroad2021/RabbitChallenge/blob/main/3_2_1_1_2_3_batch_normalization.ipynb" target="_blank">2_3_batch_normalization.ipynb</a>
+				<a href="https://nbviewer.jupyter.org/github/ontheroad2021/RabbitChallenge/blob/main/3_2_1_1_2_3_batch_normalization.ipynb" target="_blank">バッチ正規化</a><br>
 
 			</td>
 			<td>
@@ -308,8 +308,8 @@ td {
 			<td class="right">
 				１点
 			</td>
-			<td class="right">
-				１点
+			<td>
+				<a href="https://nbviewer.jupyter.org/github/ontheroad2021/RabbitChallenge/blob/main/3_2_2_1_2_4_optimizer_after.ipynb" target="_blank">学習率最適化手法</a>
 			</td>
 			<td class="right">
 				１点
@@ -322,11 +322,36 @@ td {
 			<td class="left">
 				Section３：過学習
 			</td>
-			<td class="right">
-				１点
+			<td class="left">
+				<ul>
+
+<li>過学習：テスト誤差と訓練誤差とで学習曲線が乖離する事。
+
+<li>正則化：ネットワークの自由度（層数、ノード数、パラメータの値等）を制約する事。</li>
+
+					<ul>				
+
+<li>L1正則化（Lasso回帰）マンハッタン距離（P1ノルム）</li>
+
+<li>L2正則化（Ridge回帰）ユークリッド距離（P2ノルム）</li>				
+				
+					</ul>
+
+<li>ドロップアウト</li>				
+				
+<li>Weight decay（荷重減衰）</li>
+
+					<ul>
+				
+<li>重みが大きい値は、学習において重要な値であるが、重みが大きいと過学習が起こる。</li>
+
+<li>過学習がおこりそうな重みの大きさ以下で重みをコントロールし、かつ重みの大きさにはばらつきを出す必要がある。</li>				
+
+					</ul>
+				</ul>		
 			</td>
-			<td class="right">
-				１点
+			<td>
+				<a href="https://nbviewer.jupyter.org/github/ontheroad2021/RabbitChallenge/blob/main/3_2_3_1_2_5_overfiting.ipynb" target="_blank">過学習</a>
 			</td>
 			<td class="right">
 				１点
