@@ -2,7 +2,7 @@
 <html>
 <head>
 
-<meta name="twitter:title" content="深層学習前半"/>
+<meta name="twitter:title" content="深層学習前半レポート"/>
 <meta name="twitter:description" content="深層学習前半の要点のまとめと実装演習結果へのリンクです。"/>
 <meta name="twitter:image" content="https://ontheroad2021.github.io/RabbitChallenge/images/RabbitChallengeImage.png"/>
 <meta name="twitter:card" content="summary"/>
@@ -76,7 +76,7 @@ td {
 	<div id="navbar">
 		<table class="header">
 			<tr>
-				<th colspan="8"><h2>深層学習前半</h2></th>
+				<th colspan="8"><h2>深層学習前半レポート</h2></th>
 			</tr>
 			<tr>
 				<th width="5%">ビデオ視聴学習者提出区分け</th>
@@ -305,8 +305,29 @@ td {
 			<td class="left">
 				Section２：学習率最適化手法
 			</td>
-			<td class="right">
-				１点
+			<td class="left">
+				<ul>
+
+<li>学習率最適化のアニメーション（<a href="https://github.com/Jaewan-Yun/optimizer-visualization" target="_blank">*</a>）</li>					
+
+<li>鞍点問題のアニメーション（<a href="https://blog.albert2005.co.jp/2016/08/24/deeplearning%e3%81%8c%e3%81%aa%e3%81%9c%e3%81%86%e3%81%be%e3%81%8f%e5%ad%a6%e7%bf%92%e5%87%ba%e6%9d%a5%e3%82%8b%e3%81%ae%e3%81%8b/" target="_blank">*</a>）</li>					
+					
+<li>モメンタム：SDGのジグザグ運転に対して株価の移動平均のような動きをする。</li>					
+					
+<li>AdaGrad：緩やかな斜面に強い。</li>					
+					
+<li>RMSProp（AdaGradを改良）；鞍点問題をスムーズに解消できるようにした試みになる。</li>					
+					<ul>					
+
+<li>α：どれくらい前回の経験を生かすか。</li>					
+					
+<li>AdaGradのようにハイパーパラメータの調整が必要な場合が少ない。</li>					
+
+					</ul>
+
+<li>Adam：優秀な最適化手法（Optimizer）モメンタム及びRMSPropのメリットを学んだアルゴリズムである。</li>										
+
+				</ul>
 			</td>
 			<td>
 				<a href="https://nbviewer.jupyter.org/github/ontheroad2021/RabbitChallenge/blob/main/3_2_2_1_2_4_optimizer_after.ipynb" target="_blank">学習率最適化手法</a>
