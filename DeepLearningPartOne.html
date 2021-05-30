@@ -374,7 +374,7 @@ td {
 			<td>
 				<a href="https://nbviewer.jupyter.org/github/ontheroad2021/RabbitChallenge/blob/main/3_2_3_1_2_5_overfiting.ipynb" target="_blank">過学習</a>
 			</td>
-			<td class="right">
+			<td>
 				<a href="https://github.com/ontheroad2021/RabbitChallenge/blob/main/3_2_3_2_Review_Test.md" target="_blank">確認テスト（過学習）</a>
 			</td>
 			<td class="right">
@@ -385,14 +385,46 @@ td {
 			<td class="left">
 				Section４：畳み込みニューラルネットワークの概念
 			</td>
-			<td class="right">
-				１点
+			<td class="left">
+				<ul>
+
+<li>CNN：画像処理を行う時に良く用いられるニューラルネットワーク。次元間で繋がりのあるデータならなんでも扱える。</li>
+
+<li>LeNet：畳み込みニューラルネットワークの代表的なものの1つ。</li>
+				
+<li>畳み込み層：ニューラルネットワークでは変換を行うというのはデータから特徴を読み取るという事に直接該当します。</li>
+				
+<li>全結合層での学習：全体の構成＝次元の繋がりを保つ（特徴の抽出）＋人間が欲しい結果（全結合層）</li>
+				
+<li>畳み込み層：３次元の空間情報も学習できるような層である。</li>
+
+					<ul>
+
+<li>フィルター（全結合でいう重み）</li>
+
+<li>バイアス（畳み込みの演算概念）</li>
+
+<li>パディング（畳み込み演算を何回も繰り返すと画像が小さくなってしまう）</li>
+
+<li>ストライド（ストライドの数はダイレクトに出力画像を小さくする要因になる）</li>
+
+<li>チャネル（フィルターの数）</li>
+
+					</ul>
+				
+<li>畳み込み演算をしたくなった理由：全結合では、縦、横、チャネルの３次元データ（特徴）が１次元のデータとして処理される。それでは上手く画像が持つ情報から特徴を抽出する事ができない。</li>
+				
+<li>im2col:畳み込み演算を効率的に行うためのアルゴリズム。</li>
+				
+<li>プーリング層：重みがない。Max Pooling, Avg Pooling：畳み込み演算と同じように少しづつずれながら画像を読み込む。</li>
+
+				</ul>
 			</td>
 			<td>
 				<a href="https://nbviewer.jupyter.org/github/ontheroad2021/RabbitChallenge/blob/main/3_2_4_1_2_6_simple_convolution_network_after.ipynb" target="_blank">畳み込みネットワーク</a>
 			</td>
-			<td class="right">
-				１点
+			<td>
+				確認テスト(畳み込みニューラルネットワークの概念)
 			</td>
 			<td class="right">
 				１点			
@@ -402,8 +434,30 @@ td {
 			<td class="left">
 				Section５：最新のＣＮＮ
 			</td>
-			<td class="right">
-				１点
+			<td class="left">
+				<ul>
+
+<li>AlexNet：比較的初期の小さなニューラルネット</li>
+					
+<li>モデルの構造：５層の畳み込み層、及びプーリング層等、それに続く３層の全結合層から構成される。</li>
+					
+<li>畳み込み演算の部分から全結合層に至る部分について：</li>
+										
+<li>[13, 13, 256]の画像</li>
+					
+					<ul>
+
+<li>Flatten：横１列にずらっと並べるだけ[43264]。初期のニューラルネットワークでの１列の並べ替えでは非常に良く行われている。</li>
+					
+<li>Global Max Pooling：[13*13]をあたかも１つのフィルターのように見立て、Maxを使用する。[256]にまで圧縮される。</li>
+					
+<li>Global Avg Pooling：上と同様、Avg。</li>
+					
+					</ul>
+					
+<li>後２つは何故か非常に上手くいく。一気に数値を減らせる割に非常に効率的に特徴量を抽出して認識精度の向上をはかる事ができる。</li>
+					
+				</ul>					
 			</td>
 			<td class="right">
 				１点
