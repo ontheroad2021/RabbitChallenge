@@ -23,15 +23,10 @@
 
 下図について、L1正則化を表しているグラフはどちらか答えよ。
 
-
-
+<p align="center">
+    <img src="https://raw.githubusercontent.com/ontheroad2021/RabbitChallenge/main/images/3_2_3_2_Review_Test_02.png"> 
+</p>
 
 解答：
 
-正解は (2) 0.25
-
-<p align="center">
-    <img src="https://raw.githubusercontent.com/ontheroad2021/RabbitChallenge/main/images/3_2_1_2_Review_Test_02.png"> 
-</p>
-
-
+正解は 右のLasso推定量。
