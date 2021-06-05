@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="twitter:title" content="深層学習後半レポート"/>
+<meta name="twitter:description" content="深層学習後半の要点のまとめと実装演習結果へのリンクです。"/>
+<meta name="twitter:image" content="https://ontheroad2021.github.io/RabbitChallenge/images/RabbitChallengeImage.png"/>
+<meta name="twitter:card" content="summary"/>
+
+<style>
+body {
+	background-color: white;
+}
+table {
+	border-collapse: collapse;
+	background-color: lightgray;
+}
+th, td {
+	border: 1px solid #333;
+}
+td {
+	text-align: center;
+}
+
+.group { 
+	background: powderblue;
+	width: 100%;	
+}
+
+/*
+.group:hover {
+    background-color: lightsteelblue;
+}
+*/
+
+.g1 { width:  5% }
+.g2 { width: 10%; text-align: left; }
+.g3 { width: 15%; text-align: left; }
+.g4 { width: 25%; text-align: left; }
+.g5 { width: 10%; text-align: }
+.g6 { width: 10%; text-align: }
+.g7 { width: 10%; text-align: }
+
+.header {
+	padding: 10px;
+	text-align: center;
+	background:steelblue;
+	color: black;
+	font-size: 20px;
+	border: 1px solid #333;
+
+	overflow-y: auto; 
+    position: sticky; 
+	top: 0; 
+}
+.left { display: table-cell; text-align: left; }
+.right { display: table-cell; text-align: right; }
+
+#navbar {
+  padding: 0px;
+  text-align: center;
+  background-color: steelblue;
+  color: black;
+  font-size: 20px;
+  /* border: 1px solid #333; */
+
+  position: sticky; /* Make it stick/fixed */
+  top: 0; /* Stay on top */
+  transition: top 1.0s; /* Transition effect when sliding down (and up) */
+}
+
+</style>
+</head>
+
+<body>
+	<div id="navbar">
+		<table class="header">
+			<tr>
+				<th colspan="8"><h2>深層学習後半レポート</h2></th>
+			</tr>
+			<tr>
+				<th width="5%">ビデオ視聴学習者提出区分け</th>
+				<th width="10%">科目</th>
+				<th width="15%">章タイトル</th>
+				<th width="25%" class="left">１点１００文字以上で要点のまとめ</th>
+				<th width="10%" class="left">実装演習結果キャプチャーまたはサマリーと考察</th>
+				<th width="10%" class="left">「確認テスト」など、自身の考察結果</th>
+				<th width="10%" class="left">演習問題や参考図書、修了課題など関連記事レポートによる加点</th>
+			</tr>
+		</table	>
+	</div>
+		
+	<table class="group">
+		<tr>
+			<td class="g1" rowspan="13">【d】</td>
+			<td class="g2" rowspan="7" class="left">深層学習day３</td>
+			<td class="g3">
+				Section１：再帰型ニューラルネットワークの概念
+			</td>
+			<td class="g4">
+
+				<ul>
+
+				</ul>
+			</td>
+			<td class="g5">
+				<a href="https://nbviewer.jupyter.org/github/ontheroad2021/RabbitChallenge/blob/main/3_1_1_1_1_1_forward_propagation.ipynb" target="_blank">順伝播</a>
+			</td>
+			<td class="g6">
+				<a href="https://github.com/ontheroad2021/RabbitChallenge/blob/main/3_1_1_2_Review_Test.md" target="_blank">確認テスト（入力層～中間層）</a>
+			</td>
+			<td class="g7">
+				該当なし
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section２：ＬＳＴＭ
+			</td>
+			<td class="left">
+				<ul>
+
+	
+				</ul>
+			</td>
+			<td>
+				<a href="https://nbviewer.jupyter.org/github/ontheroad2021/RabbitChallenge/blob/main/3_1_2_1_1_1_forward_propagation_after.ipynb" target="_blank">順伝播</a>
+			</td>
+			<td>
+				<a href="https://github.com/ontheroad2021/RabbitChallenge/blob/main/3_1_2_2_Review_Test.md" target="_blank">確認テスト（活性化関数）</a>
+			</td>
+			<td>
+				該当なし			
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section３：ＧＲＵ
+			</td>
+			<td class="left">
+				<ul>
+
+
+
+				</ul>
+			</td>
+			<td>
+				<a href="https://nbviewer.jupyter.org/github/ontheroad2021/RabbitChallenge/blob/main/3_1_3_1_1_2_back_propagation.ipynb" target="_blank">逆伝播</a>	
+			</td>
+			<td>
+				<a href="https://github.com/ontheroad2021/RabbitChallenge/blob/main/3_1_3_2_Review_Test.md" target="_blank">確認テスト（出力層）</a>
+			</td>
+			<td>
+				該当なし			
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section４：双方向ＲＮＮ
+			</td>
+			<td class="left">
+				<ul>
+
+				</ul>
+			</td>
+			<td>
+				<a href="https://nbviewer.jupyter.org/github/ontheroad2021/RabbitChallenge/blob/main/3_1_4_1_1_3_stochastic_gradient_descent.ipynb" target="_blank">確率的勾配降下法</a>
+			</td>
+			<td>
+				<a href="https://github.com/ontheroad2021/RabbitChallenge/blob/main/3_1_4_2_Review_Test.md" target="_blank">確認テスト（勾配降下法）</a>
+			</td>
+			<td>
+				該当なし		
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section５：Ｓｅｑ２Ｓｅｑ
+			</td>
+			<td class="left">
+				<ul>
+
+
+				</ul>
+			</td>
+			<td>
+				<a href="https://nbviewer.jupyter.org/github/ontheroad2021/RabbitChallenge/blob/main/3_1_5_1_1_4_1_mnist_sample.ipynb" target="_blank">MNIST</a>
+			</td>
+			<td>
+				<a href="https://github.com/ontheroad2021/RabbitChallenge/blob/main/3_1_5_2_Review_Test.md" target="_blank">確認テスト（誤差逆伝播法）</a>
+			</td>
+			<td>
+				該当なし			
+			</td>
+			<tr>
+				<td class="left">
+					Section６：Ｗｏｒｄ２ｖｅｃ
+				</td>
+				<td class="left">
+					<ul>
+	
+	
+					</ul>
+				</td>
+				<td>
+					<a href="https://nbviewer.jupyter.org/github/ontheroad2021/RabbitChallenge/blob/main/3_1_5_1_1_4_1_mnist_sample.ipynb" target="_blank">MNIST</a>
+				</td>
+				<td>
+					<a href="https://github.com/ontheroad2021/RabbitChallenge/blob/main/3_1_5_2_Review_Test.md" target="_blank">確認テスト（誤差逆伝播法）</a>
+				</td>
+				<td>
+					該当なし			
+				</td>
+				<tr>
+					<td class="left">
+						Section７：Ａｔｔｅｎｔｉｏｎ　Ｍｅｃｈａｎｉｓｍ
+					</td>
+					<td class="left">
+						<ul>
+		
+
+		
+						</ul>
+					</td>
+					<td>
+						<a href="https://nbviewer.jupyter.org/github/ontheroad2021/RabbitChallenge/blob/main/3_1_5_1_1_4_1_mnist_sample.ipynb" target="_blank">MNIST</a>
+					</td>
+					<td>
+						<a href="https://github.com/ontheroad2021/RabbitChallenge/blob/main/3_1_5_2_Review_Test.md" target="_blank">確認テスト（誤差逆伝播法）</a>
+					</td>
+					<td>
+						該当なし			
+					</td>
+		</tr>
+			<td rowspan="6" class="left">深層学習day４</td>
+			<td class="left">
+				Section１：強化学習
+			</td>
+			<td class="left">
+				<ul>
+
+				</ul>
+			</td>
+			<td>
+				不要
+			</td>
+			<td>
+				不要	
+			</td>
+			<td>
+				不要
+			</td>
+		</tr>	
+		<tr>
+			<td class="left">
+				Section２：ＡｌｐｈａＧｏ
+			</td>
+			<td class="left">
+				<ul>
+
+				</ul>
+			</td>
+			<td>
+				不要
+			</td>
+			<td>
+				不要	
+			</td>
+			<td>
+				不要			
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section３：軽量化・高速化技術
+			</td>
+			<td class="left">
+				<ul>
+
+
+
+				</ul>		
+			</td>
+			<td>
+				不要
+			</td>
+			<td>
+				不要	
+			</td>
+			<td>
+				不要			
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section４：応用モデル
+			</td>
+			<td class="left">
+				<ul>
+
+				</ul>
+			</td>
+			<td>
+				不要
+			</td>
+			<td>
+				不要	
+			</td>
+			<td>
+				不要			
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section５：Ｔｒａｎｓｆｏｒｍｅｒ
+			</td>
+			<td class="left">
+				<ul>
+
+				</ul>					
+			</td>
+			<td>
+				不要
+			</td>
+			<td>
+				不要	
+			</td>
+			<td>
+				不要			
+			</td>
+		</tr>
+		<tr>
+			<td class="left">
+				Section６：物体検知・セグメンテーション
+			</td>
+			<td class="left">
+				<ul>
+
+				</ul>					
+			</td>
+			<td>
+				不要
+			</td>
+			<td>
+				不要	
+			</td>
+			<td>
+				不要			
+			</td>
+		</tr>	
+	</table>
+
+	<script>
+		/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+		var prevScrollpos = window.pageYOffset;
+		window.onscroll = function() {
+		var currentScrollPos = window.pageYOffset;
+		  if (prevScrollpos > currentScrollPos) {
+			document.getElementById("navbar").style.top = "0";
+		  } else {
+			document.getElementById("navbar").style.top = "-250px";
+		  }
+		  prevScrollpos = currentScrollPos;
+		}
+	</script>
+
+</body>
+</html>
