@@ -10,16 +10,19 @@ RNNのネットワークには大きくわけて3つの重みがある。1つは
 
 ## 確認テスト２
 
-以下の数式をPythonで書け。
+連鎖率の原理を使い、dz/dx を求めよ。
 
 <p align="center">
-  <img src="https://latex.codecogs.com/svg.latex?\begin{align*}u&=w_1x_1+w_2x_2+w_3x_3+w_4x_4+b\\&=\mathbf{W}\mathbf{x}+b\end{align*}" />
-</P>
+    <img src="https://latex.codecogs.com/svg.latex?\begin{align*}z&=t^2\\t&=x+y\\\end{align*}"> 
+</p>
 
 解答：
-```
-u = np.dot(x, W) + b
-```
+
+<p align="center">
+    <img src="https://github.com/ontheroad2021/RabbitChallenge/blob/main/images/3_2_1_2_Review_Test_01.png"> 
+</p>
+
+
 
 ## 確認テスト３
 
