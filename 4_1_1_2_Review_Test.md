@@ -26,7 +26,11 @@ RNNのネットワークには大きくわけて3つの重みがある。1つは
 
 ## 確認テスト３
 
-1-1のファイルから中間層を定義しているソースを抜き出せ。
+下図のy1をx・s0・s1・win・w・woutを用いて数式で表せ。※バイアスは任意の文字で定義せよ。※また中間層の出力にシグモイド関数g(x)を作用させよ。
+
+<p align="center">
+    <img src="https://github.com/ontheroad2021/RabbitChallenge/blob/main/images/4_1_1_2_Review_Test_01.png"> 
+</p>
 
 解答：
 ```
