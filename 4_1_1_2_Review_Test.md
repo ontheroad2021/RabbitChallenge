@@ -26,17 +26,14 @@ RNNのネットワークには大きくわけて3つの重みがある。1つは
 
 ## 確認テスト３
 
-下図のy1をx・s0・s1・win・w・woutを用いて数式で表せ。※バイアスは任意の文字で定義せよ。※また中間層の出力にシグモイド関数g(x)を作用させよ。
+下図の <img src="https://latex.codecogs.com/svg.latex?\begin{align*}y_1\end{align*}"> を <img src="https://latex.codecogs.com/svg.latex?\begin{align*}x%20\cdot%20s_0%20\cdot%20s_1%20\cdot%20w_{in}%20\cdot%20w%20\cdot%20w_{out}\end{align*}"> を用いて数式で表せ。※バイアスは任意の文字で定義せよ。※また中間層の出力にシグモイド関数g(x)を作用させよ。
 
 <p align="center">
     <img src="https://github.com/ontheroad2021/RabbitChallenge/blob/main/images/4_1_1_2_Review_Test_01.png"> 
 </p>
 
 解答：
-```
-# 2層の総入力
-u2 = np.dot(z1, W2) + b2
-    
-# 2層の総出力
-z2 = functions.relu(u2)
-```    
+
+<p align="center">
+   <img src="https://latex.codecogs.com/svg.latex?\begin{align*}y_{1}&=g(w_{out}\cdot%20z_{1}+c)\\z_{1}&=f(w_{in}\cdot%20x_{1}+w\cdot%20z_{0}+b)\end{align*}"> 
+</p>
