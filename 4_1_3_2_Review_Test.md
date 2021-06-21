@@ -1,4 +1,4 @@
-# 深層学習 day３ Section3：ＧＲＵ
+# 深層学習 day３ Section３：ＧＲＵ
 
 ## 確認テスト１
 
