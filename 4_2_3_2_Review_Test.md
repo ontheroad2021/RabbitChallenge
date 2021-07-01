@@ -2,6 +2,11 @@
 
 ## 確認テスト１
 
+<p align="center">
+    <img src="https://latex.codecogs.com/svg.latex?\begin{align*}z&=t^2\\t&=x+y\\\end{align*}"> 
+</p>
+
+
 ＬＳＴＭとＣＥＣが抱える課題について、それぞれ簡潔に述べよ。
 
 解答：
