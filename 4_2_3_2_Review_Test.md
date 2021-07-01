@@ -37,4 +37,5 @@
     <img src="https://github.com/ontheroad2021/RabbitChallenge/blob/main/images/4_2_3_2_Review_Test_03.png"> 
 </p>
 
-解答：
+解答：パラメータ数に対する受容野が広い
+
