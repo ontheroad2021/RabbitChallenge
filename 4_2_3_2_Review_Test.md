@@ -23,3 +23,18 @@
 それが（ＨｘＷｘＭ）必要である。
 従って、計算量は、ＨｘＷｘＣｘＭ となる。 
 
+## 確認テスト２
+
+<p align="center">
+    <img src="https://github.com/ontheroad2021/RabbitChallenge/blob/main/images/4_2_3_2_Review_Test_02.png"> 
+</p>
+
+解答：
+
+## 確認テスト３
+
+<p align="center">
+    <img src="https://github.com/ontheroad2021/RabbitChallenge/blob/main/images/4_2_3_2_Review_Test_03.png"> 
+</p>
+
+解答：
