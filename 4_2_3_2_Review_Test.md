@@ -29,7 +29,7 @@
     <img src="https://github.com/ontheroad2021/RabbitChallenge/blob/main/images/4_2_3_2_Review_Test_02.png"> 
 </p>
 
-解答：Dilated causal comvolution
+解答：Dilated causal convolution
 
 ## 確認テスト３
 
