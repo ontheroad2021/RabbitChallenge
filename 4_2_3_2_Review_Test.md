@@ -3,17 +3,16 @@
 ## 確認テスト１
 
 <p align="center">
-    <img src="https://latex.codecogs.com/svg.latex?\begin{align*}z&=t^2\\t&=x+y\\\end{align*}"> 
-</p>
-
-<p align="center">
     <img src="https://github.com/ontheroad2021/RabbitChallenge/blob/main/images/4_2_3_2_Review_Test_01.png"> 
 </p>
 
-
-ＬＳＴＭとＣＥＣが抱える課題について、それぞれ簡潔に述べよ。
-
 解答：
+
+（い）  
+
+
+
+（う）  
 
 ＬＳＴＭは入力ゲート、出力ゲート、忘却ゲートそしてＣＥＣ、それぞれ４つの部品を持つ事で構成されていた。  
 そのため、ＬＳＴＭではパラメータ数が多く、計算負荷が高くなるという課題があった。  
