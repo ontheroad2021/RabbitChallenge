@@ -503,15 +503,78 @@ td {
 				Section４：応用モデル
 			</td>
 			<td class="left">
+				「MobileNet（画像認識のモデルで軽量化したモデル）」
 				<ul>
-
+<li>２０１７年に精度は最高レベルに達しており、そこから先は軽くて性能が良いモデルを研究する事が多くなった。MobileNetはその先駆け。あまり計算量を増やさずに比較的高性能である事が目標。</li>
+<li>一般的な畳み込みレイヤ：ストライド１でパディングを適用した場合の畳み込み計算の計算量。</li>
+<li>MobileNetはここから、これをどうにか減らして行こうという試み。</li>
+<li>Depthwise Convolution と Pointwise Convolution の組み合わせで軽量化を実現。</li>
+					<ul>
+					
+<li>Depthwise Convolution：入力マップのチャネルごとに畳み込みを実施 ⇒ 計算量を大幅に削減可能。</li>
+<li>Pointwise Convolution：1x1 Conv とも呼ばれる（正確には1x1xC） ⇒ 計算量を大幅に削減可能。</li>
+					</ul>
+				</ul>
+			
+			「DenseNet（画像認識のネットワーク）」
+				<ul>
+<li>DenseBlock</li>
+					<ul>
+<li>出力層に前の層の入力を足し合わせる。</li>
+<li>DenseBlock内の各ブロック毎にk個ずつ特徴マップのチャネル数が増加していく時、kを成長率(Growth Rate)と呼ぶ。</li>
+<li>ここでｋはハイパーパラメータである。</li>
+<li>ｋが大きくなる程ネットワークが大きくなるため、小さな整数に設定するのが良い。</li>
+					</ul>	
+			
+<li>Transition Layer</li>
+					<ul>
+<li>ＣＮＮでは中間層でチャネルサイズを変更する。</li>
+<li>特徴マップのサイズを変更し、ダウンサンプリングを行うため、Transition Layerと呼ばれる層でDence blockをつなぐ。</li>
+					</ul>
+<li>以上のような構造になっている事で、各ブロック内で特徴マップのサイズは一致。</li>
+<li>DenseNetとResNetの違い</li>
+					<ul>
+<li>DenseBlockでは前方の各層からの出力全てが後方の層への入力として用いられる。</li>
+<li>RessidualBlockでは前1層の入力のみ後方の層へ入力。</li>
+					</ul>
+				</ul>
+			
+			「BatchNormLayer」
+				<ul>
+<li>Batch Normの問題点</li>
+<li>Batch Sizeが小さい条件下では、学習が収束しないことがあり、代わりにLayer Normalizationなどの正規化手法が使われることが多い。</li>
+<li>Batch Sizeに影響を受ける。Batch Normalization というのは実際には使いたくない。ミニバッチというのは非常に厄介。学習を行う時のハードウェア（CPU, GPU, TPU）によって、ミニバッチサイズは変えざるを得ない。そうすると、Batch Normalization の効果というのはよく追えなくなる。</li>
+				</ul>
+			
+			「Batch Norm以外の正規化」
+				<ul>
+<li>Batch Norm：ミニバッチに含まれるsampleの同一チャネルが同一分布に従うよう正規化</li>
+<li>Layer Norm：それぞれのsampleの全てのpixelsが同一分布に従うよう正規化</li>
+<li>Instance Nrom：さらにchannelも同一分布に従うよう正規化</li>
+<li>ミニバッチのサイズの影響を受けるのはミニバッチ数で正規化を行っているものだけなため、Batch Norm のみがミニバッチのサイズの影響を受ける。</li>
+				</ul>
+				
+			「Batch Norm」
+				<ul>
+<li>ミニバッチというのは演算器の性能によって、大きさというのはシビアに制限されてしまう。画像の認識モデルであれば、TPUは100枚くらいが限界、普通のCPUなら数枚から十数枚がバッチサイズ、ミニバッチサイズの上限となる。そのためBatch Normalization というのは使い勝手が良くない。</li>	
+				</ul>
+			
+			「Layer Norm」
+				<ul>
+<li>直観的にはBatch NormとLayer Normはやっている事がだいぶ違う。これが、深層学習モデルの難しいところ。普通に考えるとBatch Normというのは正規化の方法としては順当である。ミニバッチの問題があったため、Layer Normのような手法が普通に用いられている。</li>
+				</ul>
+				
+			「Instance Norm」
+				<ul>
+<li>各々の画像の中の１つ１つのチャネルの中だけで正規化をしてあげる。赤なら赤、緑なら緑、青なら青。このようにばらばらに各チャネルで正規化を行ったとしても、画像のスタイル転送というタスクであったり、テクスチャの合成というタスクでは比較的上手く行く。</li>
+<li>正規化は、このようにニューラルネットワークを扱う上では、はっきりした要因はわからないけども上手くいくというのは昔からしられている内容である。正規化は、そもそもデータの特長をどれも同じようにそろえるという効果があるため直観的にはそれで上手く行くというのは分かるが、正規化の対象をいろいろ変えたとしても上手く育というところはなかなか難しいところになる。</li>	
 				</ul>
 			</td>
 			<td>
 				不要
 			</td>
 			<td>
-				不要	
+				<a href="https://github.com/ontheroad2021/RabbitChallenge/blob/main/4_2_3_2_Review_Test.md" target="_blank">確認テスト（応用モデル）</a>	
 			</td>
 			<td>
 				不要			
