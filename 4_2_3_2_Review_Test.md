@@ -37,5 +37,6 @@
     <img src="https://github.com/ontheroad2021/RabbitChallenge/blob/main/images/4_2_3_2_Review_Test_03.png"> 
 </p>
 
-解答：パラメータ数に対する受容野が広い
+解答：パラメータ数に対する受容野が広い  
 
+Wavenetの工夫というのは、パラメータは既存の畳み込みの手法と同じくらいの数で作りたいのだけども、より長い時間的範囲を上手く使いたいという目標を持っていました。
