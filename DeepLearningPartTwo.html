@@ -95,7 +95,7 @@ td {
 			<td class="g1" rowspan="13">【d】</td>
 			<td class="g2" rowspan="7" class="left">深層学習day３</td>
 			<td class="g3">
-				Section１：再帰型ニューラルネットワークの概念
+				Section１：<br>再帰型ニューラルネットワークの概念
 			</td>
 			<td class="g4">
 				<ul>
@@ -585,9 +585,56 @@ td {
 				Section５：Ｔｒａｎｓｆｏｒｍｅｒ
 			</td>
 			<td class="left">
+「Self-Attension(自己注意機構)」
 				<ul>
-
-				</ul>					
+<li>基本的にTransformerを構成している技術は全然新しい発明等では無く、過去のものを上手くくっつけて再構築したモデルになっているので、引用だらけの側面がある。計算量のわりに表現力の豊かなモデルとして知られています。</li>
+<li>ニューラル機械翻訳の問題点：長さに弱い。
+<li>上の問題意識から生まれた「Attention（注意機構）(2015)」
+					<ul>
+<li>情報量が多くなってきた時に何に注意を払って何に注意を払わないで良いかというのを学習的に決定していく、という機構が発明された。
+					</ul>
+<li>Attensionは何をしているのか
+					<ul>
+<li>Attenstionは辞書オブジェクト：query(検索クエリ)に一致するKeyを索引し、対応するvalueを取り出す操作であると見做す事ができる。これは「辞書オブジェクト」の機能と同じである。（Key Value Attenstionと呼ばれる。）
+					</ul>
+				</ul>
+「Transformer(2017)」
+					<ul>
+<li>Attention is all you need</li>
+<li>従来、Encoder-Decoder Model の基本だったRNNモデルを全く使用しない。
+					</ul>	
+「Transformer 主要モジュール」
+					<ul>
+<li>RNNを使用していないので文字の情報を保存できない ⇒ 単語ベクトルに単語の位置を付加。
+<li>大きくEncoderとDecoderに分かれていて、どちらもSelf-Attentionを使用しています。（Attentionと言われていても、Transformerで使用されているものと、もともとAttentionが発明された時に使用されていたものは別ものである。ソース・ターゲット注意機構。自己注意機構。）
+<li>Self-Attentionのイメージとしては、CNNが１番良い。文脈を反映した自己表現を得られる。CNNはあるピクセルを中心にした時に、その周囲の情報をConvolutionして抽象化した情報が出て来る。Attentionもそれに近い事をしている。Self-AttentionとCNNの対応関係はよく言われている事である。数式は違うが、どちらも文脈依存のConvolutionである。２つの違いは、CNNはあくまでウィンドウサイズがあるので、決められた範囲のConvolutionしかおこなわないが、Self-AttensionはInputされた全ての情報からそれぞれを定義していくので、ウィンドウサイズが文の長さのConvolutionと考えられる。
+					</ul>	
+「Transformer-Encoder」
+					<ul>
+<li>系列をインプットして、その系列が位置情報を失わないままSelf-Attention層を流れて行き、内部状態に変換される。
+					</ul>	
+「Feed-Forward Networks」
+					<ul>
+<li>全結合層（位置情報を保持したまま順伝播させる）
+<li>使用目的としては線形変換をかける層で、最終的にアウトプットの次元をそろえないといけないのでマトリックスを整えるための全結合層。
+					</ul>	
+「Scaled dot product attention」
+					<ul>
+<li>前単語に関するAttentionをまとめて計算する（Self-Attentionのミニマムな構造）
+					</ul>
+「Multi-Head Attention」
+					<ul>
+<li>上を連結したもの。８つにUNITを分けている意図はAttentionのメカニズムを分離させる事で、それぞれのAttention層が、それぞれの独自の注意のかけ方を学習し、総合的により良い注意のかけ方になるのが狙い。実際、内部のAttentionを可視化してみても、それぞれのAttention層ごとに全然違うAttentionのかけ方をしていて、役割を分担させるアンサンブル学習のような働きをしている。
+					</ul>			
+「Decoder」
+					<ul>
+<li>Encoder側と同様なMulti-Head Attentionが２個かかっている。（Self-Attention(下)とSame-Target Attention(上)が使用されている。）
+					</ul>	
+「Position Encoding」
+					<ul>
+<li>RNNを用いないので単語別の語順情報を追加する必要がある。
+					</ul>
+				</ul>						
 			</td>
 			<td>
 				<a href="https://nbviewer.jupyter.org/github/ontheroad2021/RabbitChallenge/blob/main/4_2_5_1_lecture_chap1_exercise_public.ipynb" target="_blank">Ｓｅｑ２ｓｅｑ</a><br>
