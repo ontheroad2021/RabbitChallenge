@@ -585,7 +585,7 @@ td {
 				Section５：Ｔｒａｎｓｆｏｒｍｅｒ
 			</td>
 			<td class="left">
-「Self-Attension(自己注意機構)」
+「Self-Attention(自己注意機構)」
 				<ul>
 <li>基本的にTransformerを構成している技術は全然新しい発明等では無く、過去のものを上手くくっつけて再構築したモデルになっているので、引用だらけの側面がある。計算量のわりに表現力の豊かなモデルとして知られています。</li>
 <li>ニューラル機械翻訳の問題点：長さに弱い。
@@ -593,9 +593,9 @@ td {
 					<ul>
 <li>情報量が多くなってきた時に何に注意を払って何に注意を払わないで良いかというのを学習的に決定していく、という機構が発明された。
 					</ul>
-<li>Attensionは何をしているのか
+<li>Attentionは何をしているのか
 					<ul>
-<li>Attenstionは辞書オブジェクト：query(検索クエリ)に一致するKeyを索引し、対応するvalueを取り出す操作であると見做す事ができる。これは「辞書オブジェクト」の機能と同じである。（Key Value Attenstionと呼ばれる。）
+<li>Attentionは辞書オブジェクト：query(検索クエリ)に一致するKeyを索引し、対応するvalueを取り出す操作であると見做す事ができる。これは「辞書オブジェクト」の機能と同じである。（Key Value Attentionと呼ばれる。）
 					</ul>
 				</ul>
 「Transformer(2017)」
@@ -607,7 +607,7 @@ td {
 					<ul>
 <li>RNNを使用していないので文字の情報を保存できない ⇒ 単語ベクトルに単語の位置を付加。
 <li>大きくEncoderとDecoderに分かれていて、どちらもSelf-Attentionを使用しています。（Attentionと言われていても、Transformerで使用されているものと、もともとAttentionが発明された時に使用されていたものは別ものである。ソース・ターゲット注意機構。自己注意機構。）
-<li>Self-Attentionのイメージとしては、CNNが１番良い。文脈を反映した自己表現を得られる。CNNはあるピクセルを中心にした時に、その周囲の情報をConvolutionして抽象化した情報が出て来る。Attentionもそれに近い事をしている。Self-AttentionとCNNの対応関係はよく言われている事である。数式は違うが、どちらも文脈依存のConvolutionである。２つの違いは、CNNはあくまでウィンドウサイズがあるので、決められた範囲のConvolutionしかおこなわないが、Self-AttensionはInputされた全ての情報からそれぞれを定義していくので、ウィンドウサイズが文の長さのConvolutionと考えられる。
+<li>Self-Attentionのイメージとしては、CNNが１番良い。文脈を反映した自己表現を得られる。CNNはあるピクセルを中心にした時に、その周囲の情報をConvolutionして抽象化した情報が出て来る。Attentionもそれに近い事をしている。Self-AttentionとCNNの対応関係はよく言われている事である。数式は違うが、どちらも文脈依存のConvolutionである。２つの違いは、CNNはあくまでウィンドウサイズがあるので、決められた範囲のConvolutionしかおこなわないが、Self-AttentionはInputされた全ての情報からそれぞれを定義していくので、ウィンドウサイズが文の長さのConvolutionと考えられる。
 					</ul>	
 「Transformer-Encoder」
 					<ul>
