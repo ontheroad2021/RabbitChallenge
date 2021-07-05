@@ -660,9 +660,96 @@ td {
 				Section６：物体検知・セグメンテーション
 			</td>
 			<td class="left">
+「物体認識タスク」
 				<ul>
-
-				</ul>					
+<li>分類：（画像に対し単一または複数の）クラスラベル
+<li>物体検知：Bounding Box
+<li>セマンティックセグメンテーション（意味領域分割）：（各ピクセルに対し単一の） クラスラベル
+<li>インスタンスセグメンテーション（個体領域分割）：（各ピクセルに対し単一の） クラスラベル
+				</ul>
+				
+「代表的なデータセット」
+				<ul>
+<li>クラス数が大きい事はうれしいのか？
+<li>目的に応じた「BOX/画像」の選択を。
+					<ul>
+<li>小：アイコン的な映り。日常感とはかけ離れやすい。
+<li>大：部分的な重なり等も見られる。日常生活のコンテクストに近い。
+					</ul>
+<li>目的に合ったデータセットを選ぶ事が大切（クラス数あるいはBOX／画像を１つの基準として）
+					<ul>
+<li>VOC12（Visual Object Classes）
+<li>ILSVRC12: ImageNetのサブセット
+<li>MS COCO18 (Microsoft Common Object in Context)
+<li>OICOD18 (Open Images Challenges Object Detection)
+					</ul>
+				</ul>
+			</ul>
+「評価指標」
+			<ul>
+<li>分類問題における評価指標の復習
+				<ul>
+<li>Confusion Matrix
+					<ul>
+<li>Precision = TP/(TP + FP)
+<li>Recall = TP/(TP + FN)
+					</ul>
+<li>Conf.の閾値を変化させる事でPrecision-Recall curveが描ける。
+<li>クラス分類の場合、閾値を変えても混同行列に含まれる件数は変わらない。
+<li>物体検出の場合はクラス分類と異なり、件数が変わりうる。
+				</ul>
+<li>IoU（Intersection over Union）
+				<ul>
+<li>物体検出においてはクラスラベルだけでなく, 物体位置の予測精度も評価したい。
+<li>IoU = Area of Overlap / Area of Union
+<li>IoUは値の直観的解釈が難しい。
+				</ul>
+<li>（入力１枚で見る）Precision/Recall
+<li>Precision/Recallの計算例（クラス単位）
+				<ul>
+<li>このPrecisionやRecallはConf.の閾値を変えれば変わるはずでした。
+<li>そこから出て来るのが物体検知で用いられる指標：Average Precision (AP)
+				</ul>	
+<li>AP: Average Precision
+				<ul>
+<li>PR曲線を描くためにConf.を0.05から変化させていくと、conf.の閾値の変化に伴ってRecall, Precision が変わり、それによってPR曲線が描ける。
+<li>物体検出の精度評価の指標：AP = PR曲線の下側面積
+<li>APが大きい方が良い精度指標になっている。
+				</ul>	
+<li>mAP: mean Average Precision
+				<ul>	
+<li>APの平均（APはクラスごとに計算される。）
+				</ul>	
+<li>ｍAP COCO: MS COCO で導入された指標
+				<ul>
+<li>ここまで, IoU閾値は0.5で固定 → 0.5から0.95まで0.05刻みでAP＆mAPを計算し算術平均を計算
+				</ul>	
+<li>FPS：Flames per Second
+				<ul>
+ <li>物体検知応用上の要請から, 検出精度に加え検出速度も問題となる。
+				</ul>	
+			</ul>	
+「物体検知の大枠」
+				<ul>
+<li>マイルストーン：深層学習以降の物体検知
+				<ul>
+<li>2012 AlexNetの登場を皮切りに, 時代はSIFTからDCNNへ 
+				</ul>
+<li>物体検知のフレームワーク
+				<ul>
+<li>１段階検出器（One-stage detector）
+					<ul>
+<li>候補領域の検出とクラス推定を同時に行う 
+<li>相対的に精度が低い傾向 
+<li>相対的に計算量が小さく推論も早い傾向
+					</ul>	
+<li>２段階検出器（Two-stage detector）
+					<ul>
+<li>候補領域の検出とクラス推定を別々に行う 
+<li>相対的に精度が高い傾向
+<li>相対的に計算量が大きく推論も遅い傾向
+					</ul>
+				</ul>							
 			</td>
 			<td>
 				不要
