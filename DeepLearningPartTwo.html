@@ -666,8 +666,7 @@ td {
 <li>物体検知：Bounding Box
 <li>セマンティックセグメンテーション（意味領域分割）：（各ピクセルに対し単一の） クラスラベル
 <li>インスタンスセグメンテーション（個体領域分割）：（各ピクセルに対し単一の） クラスラベル
-				</ul>
-				
+				</ul>		
 「代表的なデータセット」
 				<ul>
 <li>クラス数が大きい事はうれしいのか？
@@ -749,7 +748,67 @@ td {
 <li>相対的に精度が高い傾向
 <li>相対的に計算量が大きく推論も遅い傾向
 					</ul>
-				</ul>							
+				</ul>	
+			</ul>	
+「SSD: Single Shot Detector」
+				<ul>
+<li>SSDのネットワークアーキテクチャ
+					<ul>
+<li>YOLOと並んで有名なモデル。
+<li>１段階検出器モデルの１つ。
+<li>VGG16をベースとしたアーキテクチャ。
+					</ul>
+<li>特徴マップからの出力
+					<ul>
+<li>マップ中の１つの特徴量における１つのDefault Boxについて出力サイズは「#Class+4」。
+<li>マップ中の各特徴量にk個のDefault Boxを用意するとき, 出力サイズは「k（#Class + 4）」。
+<li>更に, 特徴マップのサイズがm×nであるとすれば, 出力サイズは「k（#Class + 4）mn」。
+					</ul>
+<li>多数のDefault Boxを用意したことで生ずる問題への対処
+					<ul>
+<li>Non-Maximum Suppression
+						<ul>
+<li>Default Boxを多数用意したことにより１つの物体しか映っていなくとも、そこに複数のBounding Boxが存在する事になってしまいます。
+<li>対策：IoUを計算し、IoUが１定以上かぶっているのであれば、最もconf.が高いもののみを残す。
+						</ul>
+<li>Hard Negative Mining
+						<ul>
+<li>物体として映っているものよりも、背景と判断されるネガティヴクラスに属するようなBounding Boxは多く存在するはず。拝啓（ネガティヴ）と非背景（ポジティヴ）のバランスが非常に不均衡になる事が用意に想像される。
+<li>対策：最大でも1:3となるように、ネガティヴの方が大きくても3倍でというような、制約をかける（ネガティヴのBounding Boxを削っている。）
+						</ul>
+					</ul>
+<li>損失関数
+					<ul>
+<li>損失関数がconf.とloc.に依存している事を確認。
+					</ul>
+				</ul>		
+「Semantic Segmentationの概略」
+					<ul>
+<li>Up-sampling
+						<ul>
+<li>ConvolutionやPoolingを繰り返す事により、入力画像の解像度が落ちていくという問題がある。セマンティックセグメンテーションでは各ピクセルに対してクラス分類を行う事となるため、落ちた解像度をどのようにして元に戻すのか、が問題となる。
+<li>この解像度をもととに戻す事をUp-samplingと言う。
+						</ul>
+<li>Deconvolution/Transposed convolution
+						<ul>
+<li>通常のConv.層と同様 kernel size, padding, stride を指定
+<li>処理手順
+						<ul>
+<li>特徴マップのpixel間隔をstrideだけ空ける
+<li>特徴マップのまわりに(kernel size - 1) - paddingだけ余白を作る
+<li>畳み込み演算を行う
+						</ul>
+<li>逆畳み込みと呼ばれることも多いが畳み込みの逆演算ではないことに注意 → 当然, poolingで失われた情報が復元されるわけではない
+					</ul>
+<li>Unpooling
+					<ul>
+<li>プーリングした時の位置情報を保持しておく方法。
+					</ul>		
+<li>Dilated Convolution
+					<ul>
+<li>Convolutionの段階で受容野を広げる工夫。
+					</ul>
+				</ul>
 			</td>
 			<td>
 				不要
