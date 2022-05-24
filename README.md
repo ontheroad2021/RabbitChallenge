@@ -1,3 +1,3 @@
 # Deep Learning
 
-https://ontheroad2021.github.io/RabbitChallenge/
+https://ontheroad2022.github.io/RabbitChallenge/
